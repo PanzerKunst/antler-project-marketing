@@ -1,0 +1,41 @@
+@import "./functions";
+
+$vw-sm: 320px;
+$vw-md: 640px;
+$vw-lg: 960px;
+$vw-xl: 1280px;
+$vw-xxl: 1600px;
+
+$min-content-side-margin: 16px;
+
+$list-padding-left: 28px;
+
+$border-radius-md: 6px;
+$border-radius-lg: 12px;
+
+$animation-duration-xs: 0.1;
+$animation-duration-sm: 0.3;
+$animation-duration-md: 0.7;
+
+$z-index-joy-input-focused-border: 1;
+$z-index-header: $z-index-joy-input-focused-border + 1;
+$z-index-tooltip: $z-index-header + 1;
+$z-index-select-list: $z-index-tooltip + 1;
+$z-index-menu-backdrop: $z-index-select-list + 1;
+$z-index-menu: $z-index-menu-backdrop + 1;
+
+$header-height: 60px;
+
+$input-padding-inline: max(0.5em, 18px);
+
+$default-field-gap: 3vmin;
+
+$font-size-xxl: 48px;
+$font-size-xl: 36px;
+$font-size-lg: 24px;
+$font-size-md: 20px;
+$font-size-sm: 16px;
+$font-size-xs: 14px;
+$font-size-xxs: 12px;
+
+$hero-picture-min-height: 500px;

@@ -1,0 +1,18 @@
+@import "/src/UI/_CommonStyles/mixins";
+
+.page.landing > main {
+  > section#hero {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+
+    @include vw(lg) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    p {
+      color: $color-text-offset;
+    }
+  }
+}
