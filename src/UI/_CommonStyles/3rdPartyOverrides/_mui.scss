@@ -1,10 +1,10 @@
 @import "../mixins";
 
 :root {
-  --joy-palette-danger-500: #{$color-danger};
+  --joy-palette-danger-500: #{$color-text-danger};
   --joy-palette-success-solidBg: #{$color-green}; // stylelint-disable-line
-  --variant-softColor: #{$color-primary-dark}; // stylelint-disable-line
-  --variant-softActiveColor: #{$color-primary-light}; // stylelint-disable-line
+  --variant-softColor: #{$color-brand-700}; // stylelint-disable-line
+  --variant-softActiveColor: #{$color-brand-500}; // stylelint-disable-line
   --variant-softBg: #{$color-radio-bg}; // stylelint-disable-line
   --variant-softHoverBg: #{$color-radio-bg-hover};  // stylelint-disable-line
   --variant-softActiveBg: #{$color-radio-bg-hover};  // stylelint-disable-line

@@ -1,9 +1,10 @@
 import classNames from "classnames"
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Link, useLocation } from "react-router-dom"
 
 import { useAppContext } from "../../../AppContext.tsx"
 import { useViewportSize } from "../../../Util/BrowserUtils.ts"
+import { ScrollToHeaderButton } from "./ScrollToHeaderButton.tsx"
 
 import s from "/src/UI/_CommonStyles/_exports.module.scss"
 import "./AppHeader.scss"
@@ -12,7 +13,8 @@ const headerHeight = parseInt(s.headerHeight!)
 let lastScrollY = window.scrollY
 
 export function AppHeader() {
-  const { headerTitle } = useAppContext()
+  const appContext = useAppContext()
+  const { headerTitle } = appContext
 
   const location = useLocation()
 
@@ -23,6 +25,7 @@ export function AppHeader() {
   const isLandingPage = location.pathname === "/"
 
   const headerRef = useRef<HTMLHeadingElement>(null)
+  const [isMenuOpen /* TODO , setIsMenuOpen*/] = useState(false)
 
   useEffect(() => {
     const header = headerRef.current
@@ -104,7 +107,8 @@ export function AppHeader() {
         ref={headerRef}
         className={classNames({
           "desktop-or-landing": !isMobile || isLandingPage,
-          mobile: isMobile
+          mobile: isMobile,
+          "menu-open": isMenuOpen
         })}
         style={!isMobile || isLandingPage ? { top: 0 } : { bottom: 0 }}
       >
@@ -112,7 +116,16 @@ export function AppHeader() {
 
         {headerTitle && <h2>{headerTitle}</h2>}
 
-        {isLandingPage ? <Link to="/home" className="underlined appears"><span>Sign in</span></Link> : <div className="image-placeholder"/>}
+        {isLandingPage ? (
+          <nav>
+            <ScrollToHeaderButton label="Why" scrollToCssSelector="#why"/>
+            <ScrollToHeaderButton label="Modules" scrollToCssSelector="#product-modules"/>
+            <ScrollToHeaderButton label="Oversight" scrollToCssSelector="#product-oversight"/>
+            <ScrollToHeaderButton label="Pricing" scrollToCssSelector="#pricing"/>
+            <Link to="/about" className="underlined appears">About</Link>
+            <Link to="/contact" className="underlined appears">Contact us</Link>
+          </nav>
+        ) : <div className="image-placeholder"/>}
       </header>
     </div>
   )

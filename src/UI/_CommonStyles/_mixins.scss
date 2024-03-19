@@ -97,11 +97,11 @@
 }
 
 @mixin header-footer-text {
-  $size: $font-size-sm;
+  $size: $font-size-xxs;
 
   font-size: $size;
   line-height: $size; // Vertical centering
-  font-weight: 300;
+  font-weight: 600;
 }
 
 @mixin underlined {
@@ -129,40 +129,6 @@
     &:hover {
       background-size: $background-size-hidden;
     }
-  }
-}
-
-@mixin quill-editor {
-  padding: 0;
-
-  > h2,
-  > p {
-    @include justify-text-on-large-screen;
-  }
-
-  > h2 {
-    font-size: $font-size-lg;
-    line-height: 1em;
-    font-weight: 600;
-    margin-bottom: 0.5em;
-  }
-
-  > p {
-    font-size: $font-size-sm;
-    margin-bottom: 1.5em;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  > iframe.ql-video {
-    width: 100%;
-    aspect-ratio: 16 / 9; // Default aspect ratio for YouTube videos
-  }
-
-  img {
-    margin-inline: auto;
   }
 }
 

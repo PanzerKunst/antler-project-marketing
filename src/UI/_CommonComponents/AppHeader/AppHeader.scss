@@ -24,8 +24,11 @@
       font-size: $font-size-md;
     }
 
-    > a.underlined {
-      @include header-footer-text;
+    > nav {
+      > button > span,
+      > a {
+        @include header-footer-text;
+      }
     }
 
     > .button.icon-only > img {
@@ -61,7 +64,7 @@
   > ul.styleless.menu {
     position: fixed;
 
-    font-size: $font-size-md;
+    font-size: $font-size-sm;
 
     @include vw(sm) {
       bottom: $header-height - 5px;

@@ -1,18 +1,187 @@
 @import "/src/UI/_CommonStyles/mixins";
 
 .page.landing > main {
-  > section#hero {
+  margin-block: 0;
+
+  $side-padding-text-block: 8vw;
+
+  .text-block-and-img {
     display: flex;
     flex-direction: column;
-    gap: 3em;
+    gap: 3vh;
 
     @include vw(lg) {
+      gap: 3vw;
       display: grid;
       grid-template-columns: 1fr 1fr;
+
+      > :first-child {
+        padding-left: $side-padding-text-block;
+
+        @include vw(lg) {
+          padding-top: 12%;
+        }
+      }
+    }
+  }
+
+  > section {
+    padding-block: 7vmax;
+
+    &:nth-of-type(even) {
+      background-color: $color-offset-bg;
     }
 
-    p {
-      color: $color-text-offset;
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2vh;
+
+      > * {
+        text-align: center;
+      }
+
+      > span {
+        color: $color-text-brand;
+        font-weight: 600;
+      }
+
+      > p {
+        max-width: 768px;
+      }
+    }
+
+    &#hero,
+    &#product-oversight {
+      padding-bottom: 0;
+    }
+
+    &#hero {
+      padding-top: 10vmax;
+
+      > div {
+        > h1 {
+          margin-bottom: 0.5em;
+        }
+
+        > p {
+          margin-bottom: 1em;
+        }
+
+        > a {
+          margin-top: 5%;
+        }
+      }
+    }
+
+    &#why > div {
+      container-type: inline-size;
+
+      > ul.styleless {
+        @include cw(md) {
+          display: grid;
+          gap: 2vw;
+          grid-template-columns: 1fr 1fr;
+        }
+        @include cw(lg) {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        > li {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 15px;
+
+          > * {
+            text-align: center;
+          }
+
+          > h3 {
+            font-size: $font-size-sm;
+          }
+
+          > p {
+            font-size: $font-size-xxs;
+          }
+        }
+      }
+    }
+
+    &#product-modules > ul > li {
+      display: flex;
+      flex-direction: column;
+      gap: 3vh;
+
+      @include vw(lg) {
+        gap: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 10vh;
+      }
+
+      > div {
+        padding-inline: $side-padding-text-block;
+      }
+    }
+
+    &#product-oversight > div {
+      display: flex;
+      flex-direction: column;
+      gap: 3vh;
+
+      @include vw(lg) {
+        gap: 3vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    &#pricing > ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 3vh;
+
+      > li {
+        flex-grow: 1;
+
+        display: flex;
+        justify-content: center;
+
+        > div {
+          min-width: 300px;
+          border: 1px solid $color-border;
+          padding: 2em;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1em;
+
+          > span {
+            color: $color-heading;
+            font-size: $font-size-xl;
+          }
+
+          > ul {
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+
+            // stylelint-disable-next-line max-nesting-depth
+            > li {
+              flex-grow: 1;
+            }
+          }
+        }
+      }
     }
   }
 }

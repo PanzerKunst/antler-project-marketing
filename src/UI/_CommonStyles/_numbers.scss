@@ -30,12 +30,31 @@ $input-padding-inline: max(0.5em, 18px);
 
 $default-field-gap: 3vmin;
 
-$font-size-xxl: 48px;
-$font-size-xl: 36px;
-$font-size-lg: 24px;
-$font-size-md: 20px;
-$font-size-sm: 16px;
-$font-size-xs: 14px;
-$font-size-xxs: 12px;
+/* Source Sans Pro
+$font-size-xxl: font-size(48);
+$font-size-xl: font-size(36);
+$font-size-lg: font-size(24);
+$font-size-md: font-size(20);
+$font-size-sm: font-size(16);
+$font-size-xs: font-size(14);
+$font-size-xxs: font-size(12); */
 
-$hero-picture-min-height: 500px;
+// Inter
+
+$font-size-display-xl: 60;
+$font-size-display-lg: 48;
+$font-size-display-md: 36;
+$font-size-display-sm: 30;
+$font-size-display-xs: 24;
+
+$font-size-text-xl: 20;
+$font-size-text-lg: 18;
+$font-size-text-md: 16;
+
+$font-size-xxl: variable-font($font-size-display-xl, $font-size-display-md);
+$font-size-xl: variable-font($font-size-display-lg, $font-size-display-md);
+$font-size-lg: variable-font($font-size-display-md, $font-size-display-sm);
+$font-size-md: variable-font($font-size-display-sm, $font-size-display-xs);
+$font-size-sm: variable-font($font-size-text-xl, $font-size-text-lg);
+$font-size-xs: variable-font($font-size-text-lg, $font-size-text-md);
+$font-size-xxs: variable-font($font-size-text-md, $font-size-text-md);

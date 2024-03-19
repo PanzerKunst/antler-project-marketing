@@ -13,6 +13,15 @@ h6 {
 
 h1,
 h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color-heading;
+}
+
+h1,
+h2,
 h3 {
   line-height: 1em;
   font-weight: 600;
@@ -24,11 +33,11 @@ h1 {
 }
 
 h2 {
-  font-size: $font-size-xl;
+  font-size: $font-size-lg;
 }
 
 h3 {
-  font-size: $font-size-lg;
+  font-size: $font-size-md;
 }
 
 p,
@@ -38,7 +47,7 @@ span {
   }
 
   &.danger {
-    color: $color-danger;
+    color: $color-text-danger;
   }
 }
 
