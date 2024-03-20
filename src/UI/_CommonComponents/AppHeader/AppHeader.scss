@@ -15,6 +15,9 @@
     background-color: $color-header-bg;
     padding-inline: 8vw;
 
+    @include drop-shadow(md);
+    transition: top #{$animation-duration-xs}s linear;
+
     > a {
       display: flex;
       align-items: center;
@@ -28,6 +31,11 @@
         font-size: #{$font-size-display-xs}px;
         font-weight: 600;
         color: $color-heading;
+
+        display: none;
+        @include vw(md) {
+          display: unset;
+        }
       }
     }
 
@@ -49,12 +57,6 @@
       > svg {
         @include img-size(24px);
       }
-    }
-
-    &.desktop-or-landing {
-      @include drop-shadow(md);
-      transition: top #{$animation-duration-xs}s linear,
-      background-color #{$animation-duration-md}s ease;
     }
 
     &.mobile {

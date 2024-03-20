@@ -15,8 +15,6 @@
   }
 }
 
-.page {
-  > main {
-    margin-block: max(15vmin, $header-height);
-  }
+.page > main {
+  margin-block: 15vh;
 }
