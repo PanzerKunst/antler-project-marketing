@@ -1,8 +1,9 @@
-import { faCirclePlay, faEye } from "@fortawesome/free-regular-svg-icons"
-import { faXmark } from "@fortawesome/free-solid-svg-icons"
+import { faCircleCheck, faCirclePlay, faEye } from "@fortawesome/free-regular-svg-icons"
+import { faArrowRightArrowLeft, faScaleBalanced, faSitemap, faXmark } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import { IconWithDualBgColor } from "./_CommonComponents/IconWithDualBgColor.tsx"
+import { IconWithSquareBorder } from "./_CommonComponents/IconWithSquareBorder.tsx"
 
 import "./LandingPage.scss"
 
@@ -70,13 +71,6 @@ export function LandingPage() {
                 <h3>No overview for the CEO</h3>
                 <p>Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here.</p>
               </li>
-              <li>
-                <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faEye} />
-                </IconWithDualBgColor>
-                <h3>No overview for the CEO</h3>
-                <p>Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here.</p>
-              </li>
             </ul>
           </div>
         </section>
@@ -98,15 +92,15 @@ export function LandingPage() {
                 <p>Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here.</p>
                 <ul className="styleless">
                   <li>
-                    <FontAwesomeIcon icon={faXmark}/>
+                    <FontAwesomeIcon icon={faCircleCheck} />
                     <span>Feature</span>
                   </li>
                   <li>
-                    <FontAwesomeIcon icon={faXmark}/>
+                    <FontAwesomeIcon icon={faCircleCheck} />
                     <span>Another feature</span>
                   </li>
                   <li>
-                    <FontAwesomeIcon icon={faXmark}/>
+                    <FontAwesomeIcon icon={faCircleCheck} />
                     <span>Feature</span>
                   </li>
                 </ul>
@@ -123,15 +117,15 @@ export function LandingPage() {
                 <p>Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here.</p>
                 <ul className="styleless">
                   <li>
-                    <FontAwesomeIcon icon={faXmark}/>
+                    <FontAwesomeIcon icon={faCircleCheck} />
                     <span>Feature</span>
                   </li>
                   <li>
-                    <FontAwesomeIcon icon={faXmark}/>
+                    <FontAwesomeIcon icon={faCircleCheck} />
                     <span>Another feature</span>
                   </li>
                   <li>
-                    <FontAwesomeIcon icon={faXmark}/>
+                    <FontAwesomeIcon icon={faCircleCheck} />
                     <span>Feature</span>
                   </li>
                 </ul>
@@ -146,15 +140,15 @@ export function LandingPage() {
                 <p>Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here.</p>
                 <ul className="styleless">
                   <li>
-                    <FontAwesomeIcon icon={faXmark}/>
+                    <FontAwesomeIcon icon={faCircleCheck} />
                     <span>Feature</span>
                   </li>
                   <li>
-                    <FontAwesomeIcon icon={faXmark}/>
+                    <FontAwesomeIcon icon={faCircleCheck} />
                     <span>Another feature</span>
                   </li>
                   <li>
-                    <FontAwesomeIcon icon={faXmark}/>
+                    <FontAwesomeIcon icon={faCircleCheck} />
                     <span>Feature</span>
                   </li>
                 </ul>
@@ -174,21 +168,27 @@ export function LandingPage() {
           <div className="text-block-and-img">
             <ul className="styleless">
               <li>
-                <FontAwesomeIcon icon={faXmark}/>
+                <IconWithSquareBorder>
+                  <FontAwesomeIcon icon={faScaleBalanced} />
+                </IconWithSquareBorder>
                 <div>
                   <h3>Company legal structure</h3>
                   <p>Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here.</p>
                 </div>
               </li>
               <li>
-                <FontAwesomeIcon icon={faXmark}/>
+                <IconWithSquareBorder>
+                  <FontAwesomeIcon icon={faSitemap} />
+                </IconWithSquareBorder>
                 <div>
                   <h3>Company legal structure</h3>
                   <p>Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here.</p>
                 </div>
               </li>
               <li>
-                <FontAwesomeIcon icon={faXmark}/>
+                <IconWithSquareBorder>
+                  <FontAwesomeIcon icon={faArrowRightArrowLeft} />
+                </IconWithSquareBorder>
                 <div>
                   <h3>Company legal structure</h3>
                   <p>Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here.</p>

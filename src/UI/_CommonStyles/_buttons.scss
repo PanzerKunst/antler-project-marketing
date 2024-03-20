@@ -37,7 +37,7 @@ a.button:not(.icon-only) {
 
   transition: all #{$animation-duration-sm}s ease; // background-size color translateY
 
-  font-size: $font-size-text-md;
+  font-size: #{$font-size-text-md}px;
   font-weight: 400;
   color: $color-btn-text;
 
@@ -93,7 +93,7 @@ a.button:not(.icon-only) {
   }
 
   &.fixed-height { // Used in modals
-    font-size: $font-size-text-md;
+    font-size: #{$font-size-text-md}px;
     border-width: 2px;
 
     > span {

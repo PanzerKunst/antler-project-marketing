@@ -79,16 +79,14 @@
       container-type: inline-size;
 
       > ul.styleless {
-        @include cw(md) {
-          display: grid;
-          gap: 2vw;
-          grid-template-columns: 1fr 1fr;
-        }
-        @include cw(lg) {
-          grid-template-columns: 1fr 1fr 1fr;
-        }
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3vh;
 
         > li {
+          max-width: 300px;
+
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -114,19 +112,50 @@
       flex-direction: column;
       gap: 3vh;
 
-      @include vw(lg) {
-        gap: 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-      }
-
       &:not(:last-child) {
         margin-bottom: 10vh;
       }
 
       > div {
-        padding-inline: $side-padding-text-block;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        > p {
+          margin-bottom: 0;
+        }
+
+        > ul {
+          padding-left: 0.5em;
+
+          > li {
+            display: flex;
+            align-items: center;
+            gap: 1em;
+
+            // stylelint-disable-next-line max-nesting-depth
+            &:not(:last-child) {
+              margin-bottom: 1em;
+            }
+
+            // stylelint-disable-next-line max-nesting-depth
+            > svg {
+              color: $color-icon-brand;
+              @include img-size(24px);
+            }
+          }
+        }
+      }
+
+      @include vw(lg) {
+        gap: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+
+        > div {
+          padding-inline: $side-padding-text-block;
+        }
       }
     }
 
@@ -140,6 +169,20 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
       }
+
+      > ul > li {
+        display: flex;
+        gap: 1em;
+
+        > .icon-with-square-border {
+          flex-shrink: 0;
+        }
+
+        h3 {
+          font-size: #{$font-size-text-xl}px;
+          margin-block: 0.7em 0.5em;
+        }
+      }
     }
 
     &#pricing > ul {
@@ -149,8 +192,6 @@
       gap: 3vh;
 
       > li {
-        flex-grow: 1;
-
         display: flex;
         justify-content: center;
 
@@ -167,6 +208,7 @@
           > span {
             color: $color-heading;
             font-size: $font-size-xl;
+            font-weight: 600;
           }
 
           > ul {
@@ -182,6 +224,15 @@
           }
         }
       }
+    }
+  }
+
+  // Side-margins on mobile
+  @include vw(sm) {
+    #hero,
+    #product-modules,
+    #product-oversight {
+      padding-inline: $min-content-side-margin;
     }
   }
 }
