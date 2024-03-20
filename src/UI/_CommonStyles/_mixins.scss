@@ -55,16 +55,20 @@
   }
 }
 
-@mixin drop-shadow($position: bottom) {
+@mixin drop-shadow($size: lg) {
   $offset-x: 0;
-  $offset-y: 4px;
-  $blur-radius: 4px;
-  $spread: 0;
-  $color: $color-drop-shadow;
+  $offset-y: 12px;
+  $blur-radius: 16px;
+  $spread: -4px;
+  $color: $color-drop-shadow-8pc;
 
-  @if $position == top {
-    $offset-y: -$offset-y;
-  } @else if $position == all-around {
+  @if $size == md {
+    $offset-y: 2px;
+    $blur-radius: 4px;
+    $spread: 0;
+    $color: $color-drop-shadow-3pc;
+
+  /* } @else if $position == all-around {
     $blur-radius: 10px;
     $spread: 2px;
     $color: $color-drop-shadow-all-around;
@@ -72,7 +76,7 @@
     $offset-y: -$offset-y;
     $blur-radius: 10px;
     $spread: 2px;
-    $color: $color-drop-shadow-all-around;
+    $color: $color-drop-shadow-all-around; */
   }
 
   box-shadow: $offset-x $offset-y $blur-radius $spread $color;
@@ -89,7 +93,7 @@
   $offset-x: 0;
   $offset-y: 0;
   $blur-radius: 0.08em;
-  filter: drop-shadow($offset-x $offset-y $blur-radius $color-drop-shadow);
+  filter: drop-shadow($offset-x $offset-y $blur-radius $color-drop-shadow-8pc);
 }
 
 @mixin to-right-red-gradient {

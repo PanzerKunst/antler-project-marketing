@@ -1,14 +1,12 @@
 import { faCircleCheck, faCirclePlay, faEye } from "@fortawesome/free-regular-svg-icons"
-import { faArrowRightArrowLeft, faScaleBalanced, faSitemap, faXmark } from "@fortawesome/free-solid-svg-icons"
+import { faArrowRightArrowLeft, faCheck, faScaleBalanced, faSitemap } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import { IconWithDualBgColor } from "./_CommonComponents/IconWithDualBgColor.tsx"
-import { IconWithSquareBorder } from "./_CommonComponents/IconWithSquareBorder.tsx"
 
 import "./LandingPage.scss"
 
 export function LandingPage() {
-  /* eslint-disable react/no-unescaped-entities */
   return (
     <div className="page landing">
       <main>
@@ -21,7 +19,7 @@ export function LandingPage() {
 
             <p>Battle-tested for the finance, healthcare and xyz industries.</p>
             <a href="https://app.metis.8b.nu" className="button lg">
-              <FontAwesomeIcon icon={faCirclePlay} />
+              <FontAwesomeIcon icon={faCirclePlay}/>
               <span>Try it out</span>
             </a>
           </div>
@@ -38,35 +36,35 @@ export function LandingPage() {
             <ul className="styleless">
               <li>
                 <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faEye} />
+                  <FontAwesomeIcon icon={faEye}/>
                 </IconWithDualBgColor>
                 <h3>No overview for the CEO</h3>
                 <p>Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here.</p>
               </li>
               <li>
                 <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faEye} />
+                  <FontAwesomeIcon icon={faEye}/>
                 </IconWithDualBgColor>
                 <h3>No overview for the CEO</h3>
                 <p>Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here.</p>
               </li>
               <li>
                 <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faEye} />
+                  <FontAwesomeIcon icon={faEye}/>
                 </IconWithDualBgColor>
                 <h3>No overview for the CEO</h3>
                 <p>Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here.</p>
               </li>
               <li>
                 <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faEye} />
+                  <FontAwesomeIcon icon={faEye}/>
                 </IconWithDualBgColor>
                 <h3>No overview for the CEO</h3>
                 <p>Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here.</p>
               </li>
               <li>
                 <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faEye} />
+                  <FontAwesomeIcon icon={faEye}/>
                 </IconWithDualBgColor>
                 <h3>No overview for the CEO</h3>
                 <p>Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here.</p>
@@ -77,7 +75,7 @@ export function LandingPage() {
 
         <section id="product-modules">
           <header>
-            <span>Metis</span>
+            <span>Code:metis</span>
             <h2>A suite of modules working together</h2>
             <p>And nimble enough for any department in you company.</p>
           </header>
@@ -86,21 +84,21 @@ export function LandingPage() {
             <li>
               <div>
                 <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faEye} />
+                  <FontAwesomeIcon icon={faEye}/>
                 </IconWithDualBgColor>
                 <h3>Risk Manager</h3>
                 <p>Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here.</p>
                 <ul className="styleless">
                   <li>
-                    <FontAwesomeIcon icon={faCircleCheck} />
+                    <FontAwesomeIcon icon={faCircleCheck}/>
                     <span>Feature</span>
                   </li>
                   <li>
-                    <FontAwesomeIcon icon={faCircleCheck} />
+                    <FontAwesomeIcon icon={faCircleCheck}/>
                     <span>Another feature</span>
                   </li>
                   <li>
-                    <FontAwesomeIcon icon={faCircleCheck} />
+                    <FontAwesomeIcon icon={faCircleCheck}/>
                     <span>Feature</span>
                   </li>
                 </ul>
@@ -111,21 +109,21 @@ export function LandingPage() {
               <img src="/images/landing/app-preview-risk-manager.png" alt="App preview"/>
               <div>
                 <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faEye} />
+                  <FontAwesomeIcon icon={faEye}/>
                 </IconWithDualBgColor>
                 <h3>Contract Manager</h3>
                 <p>Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here.</p>
                 <ul className="styleless">
                   <li>
-                    <FontAwesomeIcon icon={faCircleCheck} />
+                    <FontAwesomeIcon icon={faCircleCheck}/>
                     <span>Feature</span>
                   </li>
                   <li>
-                    <FontAwesomeIcon icon={faCircleCheck} />
+                    <FontAwesomeIcon icon={faCircleCheck}/>
                     <span>Another feature</span>
                   </li>
                   <li>
-                    <FontAwesomeIcon icon={faCircleCheck} />
+                    <FontAwesomeIcon icon={faCircleCheck}/>
                     <span>Feature</span>
                   </li>
                 </ul>
@@ -134,21 +132,21 @@ export function LandingPage() {
             <li>
               <div>
                 <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faEye} />
+                  <FontAwesomeIcon icon={faEye}/>
                 </IconWithDualBgColor>
                 <h3>Compliance Manager</h3>
                 <p>Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here.</p>
                 <ul className="styleless">
                   <li>
-                    <FontAwesomeIcon icon={faCircleCheck} />
+                    <FontAwesomeIcon icon={faCircleCheck}/>
                     <span>Feature</span>
                   </li>
                   <li>
-                    <FontAwesomeIcon icon={faCircleCheck} />
+                    <FontAwesomeIcon icon={faCircleCheck}/>
                     <span>Another feature</span>
                   </li>
                   <li>
-                    <FontAwesomeIcon icon={faCircleCheck} />
+                    <FontAwesomeIcon icon={faCircleCheck}/>
                     <span>Feature</span>
                   </li>
                 </ul>
@@ -160,35 +158,35 @@ export function LandingPage() {
 
         <section id="product-oversight">
           <header>
-            <span>Metis</span>
+            <span>Code:metis</span>
             <h2>Oversight for your company</h2>
-            <p>All Metis modules share a single source of truth for your company data.</p>
+            <p>All Code:metis modules share a single source of truth for your company data.</p>
           </header>
 
           <div className="text-block-and-img">
             <ul className="styleless">
               <li>
-                <IconWithSquareBorder>
-                  <FontAwesomeIcon icon={faScaleBalanced} />
-                </IconWithSquareBorder>
+                <div className="icon-with-square-border">
+                  <FontAwesomeIcon icon={faScaleBalanced}/>
+                </div>
                 <div>
                   <h3>Company legal structure</h3>
                   <p>Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here.</p>
                 </div>
               </li>
               <li>
-                <IconWithSquareBorder>
-                  <FontAwesomeIcon icon={faSitemap} />
-                </IconWithSquareBorder>
+                <div className="icon-with-square-border">
+                  <FontAwesomeIcon icon={faSitemap}/>
+                </div>
                 <div>
                   <h3>Company legal structure</h3>
                   <p>Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here.</p>
                 </div>
               </li>
               <li>
-                <IconWithSquareBorder>
-                  <FontAwesomeIcon icon={faArrowRightArrowLeft} />
-                </IconWithSquareBorder>
+                <div className="icon-with-square-border">
+                  <FontAwesomeIcon icon={faArrowRightArrowLeft}/>
+                </div>
                 <div>
                   <h3>Company legal structure</h3>
                   <p>Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here.</p>
@@ -206,74 +204,85 @@ export function LandingPage() {
             <p>The onboarding cost? Zero.</p>
           </header>
 
-          <ul className="styleless container">
+          <ul className="styleless">
             <li>
-              <div>
-                <span>$499/mth</span>
-                <h3>Starter plan</h3>
-                <ul className="styleless">
-                  <li>
-                    <FontAwesomeIcon icon={faXmark}/>
-                    <span>Feature</span>
-                  </li>
-                  <li>
-                    <FontAwesomeIcon icon={faXmark}/>
-                    <span>Another feature</span>
-                  </li>
-                  <li>
-                    <FontAwesomeIcon icon={faXmark}/>
-                    <span>Feature</span>
-                  </li>
-                </ul>
-                <button className="button"><span>Get started</span></button>
-              </div>
+              <span>$499/mth</span>
+              <h3>Starter plan</h3>
+              <ul className="styleless">
+                <li>
+                  <div className="icon-with-bg-color">
+                    <FontAwesomeIcon icon={faCheck}/>
+                  </div>
+                  <span>Feature</span>
+                </li>
+                <li>
+                  <div className="icon-with-bg-color">
+                    <FontAwesomeIcon icon={faCheck}/>
+                  </div>
+                  <span>Another feature</span>
+                </li>
+                <li>
+                  <div className="icon-with-bg-color">
+                    <FontAwesomeIcon icon={faCheck}/>
+                  </div>
+                  <span>Feature</span>
+                </li>
+              </ul>
+              <button className="button"><span>Get started</span></button>
             </li>
             <li>
-              <div>
-                <span>$699/mth</span>
-                <h3>Business plan</h3>
-                <ul className="styleless">
-                  <li>
-                    <FontAwesomeIcon icon={faXmark}/>
-                    <span>Feature</span>
-                  </li>
-                  <li>
-                    <FontAwesomeIcon icon={faXmark}/>
-                    <span>Another feature</span>
-                  </li>
-                  <li>
-                    <FontAwesomeIcon icon={faXmark}/>
-                    <span>Feature</span>
-                  </li>
-                </ul>
-                <button className="button"><span>Get started</span></button>
-              </div>
+              <span>$699/mth</span>
+              <h3>Business plan</h3>
+              <ul className="styleless">
+                <li>
+                  <div className="icon-with-bg-color">
+                    <FontAwesomeIcon icon={faCheck}/>
+                  </div>
+                  <span>Feature</span>
+                </li>
+                <li>
+                  <div className="icon-with-bg-color">
+                    <FontAwesomeIcon icon={faCheck}/>
+                  </div>
+                  <span>Another feature</span>
+                </li>
+                <li>
+                  <div className="icon-with-bg-color">
+                    <FontAwesomeIcon icon={faCheck}/>
+                  </div>
+                  <span>Feature</span>
+                </li>
+              </ul>
+              <button className="button"><span>Get started</span></button>
             </li>
             <li>
-              <div>
-                <span>$899/mth</span>
-                <h3>Enterprise plan</h3>
-                <ul className="styleless">
-                  <li>
-                    <FontAwesomeIcon icon={faXmark}/>
-                    <span>Feature</span>
-                  </li>
-                  <li>
-                    <FontAwesomeIcon icon={faXmark}/>
-                    <span>Another feature</span>
-                  </li>
-                  <li>
-                    <FontAwesomeIcon icon={faXmark}/>
-                    <span>Feature</span>
-                  </li>
-                </ul>
-                <button className="button"><span>Get started</span></button>
-              </div>
+              <span>$899/mth</span>
+              <h3>Enterprise plan</h3>
+              <ul className="styleless">
+                <li>
+                  <div className="icon-with-bg-color">
+                    <FontAwesomeIcon icon={faCheck}/>
+                  </div>
+                  <span>Feature</span>
+                </li>
+                <li>
+                  <div className="icon-with-bg-color">
+                    <FontAwesomeIcon icon={faCheck}/>
+                  </div>
+                  <span>Another feature</span>
+                </li>
+                <li>
+                  <div className="icon-with-bg-color">
+                    <FontAwesomeIcon icon={faCheck}/>
+                  </div>
+                  <span>Feature</span>
+                </li>
+              </ul>
+              <button className="button"><span>Get started</span></button>
             </li>
           </ul>
         </section>
       </main>
     </div>
   )
-  /* eslint-enable react/no-unescaped-entities */
 }

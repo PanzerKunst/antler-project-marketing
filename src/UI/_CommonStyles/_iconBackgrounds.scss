@@ -17,3 +17,20 @@
     @include img-size(24px);
   }
 }
+
+.icon-with-bg-color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  background-color: $color-green-100;
+
+  width: 24px;
+  height: 24px;
+
+  > svg {
+    color: $color-icon-success;
+    @include img-size(16px);
+  }
+}

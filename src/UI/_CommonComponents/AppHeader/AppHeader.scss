@@ -13,10 +13,22 @@
 
     height: $header-height;
     background-color: $color-header-bg;
-    padding-inline: $min-content-side-margin;
+    padding-inline: 8vw;
 
-    > .image-placeholder {
-      flex-basis: 40px;
+    > a {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+
+      > img {
+        @include img-size(24px);
+      }
+
+      > span {
+        font-size: #{$font-size-display-xs}px;
+        font-weight: 600;
+        color: $color-heading;
+      }
     }
 
     > h2 {
@@ -31,29 +43,22 @@
       }
     }
 
-    > .button.icon-only > img {
-      @include img-size(40px);
-      border-radius: 50%;
-    }
+    > .button.icon-only {
+      margin-right: -6px;
 
-    &.mobile {
-      @include drop-shadow(top);
-      transition: bottom #{$animation-duration-xs}s linear;
+      > svg {
+        @include img-size(24px);
+      }
     }
 
     &.desktop-or-landing {
-      @include drop-shadow;
+      @include drop-shadow(md);
       transition: top #{$animation-duration-xs}s linear,
-        background-color #{$animation-duration-md}s ease;
+      background-color #{$animation-duration-md}s ease;
+    }
 
-      &.dark {
-        background-color: $color-header-bg-dark;
-
-        > a.underlined {
-          transition: all #{$animation-duration-sm}s ease; // Same duration as in `@mixin underlined`
-          color: $color-text-negative;
-        }
-      }
+    &.mobile {
+      padding-inline: $min-content-side-margin;
     }
 
     &.menu-open {
@@ -63,21 +68,17 @@
 
   > ul.styleless.menu {
     position: fixed;
-
     font-size: $font-size-sm;
 
-    @include vw(sm) {
-      bottom: $header-height - 5px;
-      left: 0;
-      width: 100%;
+    top: $header-height - 5px;
+    left: 0;
+    width: 100%;
 
-      border-radius: 0;
-      @include drop-shadow(all-around-top);
-    }
+    border-radius: 0;
+    @include drop-shadow;
 
-    @include vw(md) {
-      top: $header-height - 5px;
-      right: 10px;
+    > li {
+      padding-inline: 1.9em;
     }
   }
 }

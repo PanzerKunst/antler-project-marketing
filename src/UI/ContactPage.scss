@@ -1,0 +1,21 @@
+@import "/src/UI/_CommonStyles/mixins";
+
+.page.contact > main {
+  h1 {
+    margin-bottom: 1em;
+  }
+
+  > img {
+    display: none;
+  }
+
+  @include vw(md) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3vw;
+
+    > img {
+      display: unset;
+    }
+  }
+}

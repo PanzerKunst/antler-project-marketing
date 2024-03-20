@@ -2,11 +2,7 @@
 
 // Base colors, only used in this file
 $color-black: rgb(0 0 0); // #000
-$color-black-opacity-20pc: color.adjust($color-black, $alpha: -0.8);
-$color-black-opacity-10pc: color.adjust($color-black, $alpha: -0.9);
-$color-black-opacity-5pc: color.adjust($color-black, $alpha: -0.95);
 $color-white: rgb(255 255 255); // #fff
-$color-white-opacity-50pc: color.adjust($color-white, $alpha: -0.5);
 $color-gray-50: rgb(249 250 251); // #F9FAFB
 $color-gray-200: rgb(234 236 240); // #EAECF0
 $color-gray-500: rgb(102 112 133); // #667085
@@ -18,18 +14,18 @@ $color-brand-100: rgb(244 235 255); // #F4EBFF
 $color-brand-500: rgb(158 119 237); // #9E77ED
 $color-brand-600: rgb(127 86 217); // #7F56D9
 $color-brand-700: rgb(105 65 198); // #6941C6
-$color-green: rgb(31 193 31); // #1FC11F
-$color-danger-600: rgb(217 45 32); // #D92D20
-$color-danger-700: rgb(180 35 24); // #B42318
-$color-red-opacity-50pc: color.adjust($color-danger-600, $alpha: -0.5);
+$color-green-100: rgb(220 250 230); // #DCFAE6
+$color-green-500: rgb(23 178 106); // #17B26A
+$color-red-600: rgb(217 45 32); // #D92D20
+$color-red-700: rgb(180 35 24); // #B42318
 
 // Functional colors, to use in the rest of the app
 $color-app-bg: $color-white;
 $color-border: $color-gray-200;
-$color-border-danger: $color-red-opacity-50pc;
-$color-btn-bg-danger: $color-danger-600;
-$color-btn-bg-icon-only-dark-hover: $color-black-opacity-5pc;
-$color-btn-bg-icon-only-light-hover: $color-white-opacity-50pc;
+$color-border-danger: color.adjust($color-red-600, $alpha: -0.5);;
+$color-btn-bg-danger: $color-red-600;
+$color-btn-bg-icon-only-dark-hover: color.adjust($color-black, $alpha: -0.95);
+$color-btn-bg-icon-only-light-hover: color.adjust($color-white, $alpha: -0.5);;
 $color-btn-bg-primary-gradient-start: $color-brand-700;
 $color-btn-bg-primary-gradient-end: $color-brand-500;
 $color-btn-border: $color-brand-600;
@@ -37,11 +33,10 @@ $color-btn-text: $color-white;
 $color-btn-text-pre-filled: $color-brand-600;
 $color-btn-text-transparent-btn: $color-gray-600;
 $color-btn-text-transparent-btn-hover: $color-gray-700;
-$color-drop-shadow: $color-black-opacity-5pc;
-$color-drop-shadow-all-around: $color-black-opacity-10pc;
+$color-drop-shadow-8pc: color.adjust($color-gray-900, $alpha: -0.92);
+$color-drop-shadow-3pc: color.adjust($color-gray-900, $alpha: -0.97);
 $color-footer-bg: $color-gray-50;
 $color-header-bg: $color-app-bg;
-$color-header-bg-dark: $color-black-opacity-20pc;
 $color-heading: $color-gray-900;
 $color-icon-dark: $color-gray-700;
 $color-icon-light: $color-white;
@@ -49,7 +44,7 @@ $color-icon-grey: $color-gray-600;
 $color-icon-brand: $color-brand-600;
 $color-icon-bg-1: $color-brand-100;
 $color-icon-bg-2: $color-brand-50;
-$color-icon-success: $color-green;
+$color-icon-success: $color-green-500;
 $color-input-bg: $color-white;
 $color-input-bg-offset: $color-gray-900;
 $color-input-text: $color-gray-900;
@@ -66,7 +61,7 @@ $color-radio-bg: $color-input-bg;
 $color-radio-bg-hover: $color-gray-200;
 $color-text: $color-gray-600;
 $color-text-brand: $color-brand-700;
-$color-text-danger: $color-danger-700;
+$color-text-danger: $color-red-700;
 $color-text-negative: $color-white;
 
 // $color-text-offset: $color-gray-600;

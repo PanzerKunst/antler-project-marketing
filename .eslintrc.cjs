@@ -44,6 +44,7 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     "react/jsx-max-props-per-line": ["error", {"maximum": 3}],
     "react/jsx-no-constructed-context-values": "error",
+    "react/no-unescaped-entities": "off",
     "@typescript-eslint/ban-ts-comment": ["error", {"ts-ignore": "allow-with-description"}],
     "@typescript-eslint/no-unused-vars": "off", // Already covered by no-unused-vars
     "@typescript-eslint/no-unsafe-call": "off",

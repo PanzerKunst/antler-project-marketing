@@ -2,7 +2,7 @@
 
 :root {
   --joy-palette-danger-500: #{$color-text-danger};
-  --joy-palette-success-solidBg: #{$color-green}; // stylelint-disable-line
+  --joy-palette-success-solidBg: #{$color-green-500}; // stylelint-disable-line
   --variant-softColor: #{$color-brand-700}; // stylelint-disable-line
   --variant-softActiveColor: #{$color-brand-500}; // stylelint-disable-line
   --variant-softBg: #{$color-radio-bg}; // stylelint-disable-line
@@ -18,12 +18,8 @@
     -webkit-backdrop-filter: none; // stylelint-disable-line property-no-vendor-prefix
   }
 
-  &.invisible-backdrop {
-    z-index: $z-index-menu-backdrop;
-
-    > .MuiModal-backdrop {
-      background-color: transparent;
-    }
+  &.invisible-backdrop > .MuiModal-backdrop {
+    background-color: transparent;
   }
 }
 
