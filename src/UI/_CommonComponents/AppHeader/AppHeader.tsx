@@ -122,7 +122,7 @@ export function AppHeader() {
           mobile: isMobile,
           "menu-open": isMenuOpen
         })}
-        style={!isMobile || isLandingPage ? { top: 0 } : { bottom: 0 }}
+        style={{ top: 0}}
       >
         <Link to="/">
           <img src="/images/vite.svg" alt="logo"/>
@@ -133,7 +133,7 @@ export function AppHeader() {
 
         {isMobile ? (
           <button className="button icon-only" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            <FontAwesomeIcon icon={faBars} />
+            <FontAwesomeIcon icon={faBars}/>
           </button>
         ) : (
           <nav>
@@ -156,18 +156,22 @@ export function AppHeader() {
 
       {isMenuOpen && ( /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-to-interactive-role */
         <Menu close={() => setIsMenuOpen(false)}>
-          <li role="button" onClick={() => handleMenuItemClick("#why")}>
-            <span>Why</span>
-          </li>
-          <li role="button" onClick={() => handleMenuItemClick("#product-modules")}>
-            <span>Modules</span>
-          </li>
-          <li role="button" onClick={() => handleMenuItemClick("#product-oversight")}>
-            <span>Oversight</span>
-          </li>
-          <li role="button" onClick={() => handleMenuItemClick("#pricing")}>
-            <span>Pricing</span>
-          </li>
+          {isLandingPage && (
+            <>
+              <li role="button" onClick={() => handleMenuItemClick("#why")}>
+                <span>Why</span>
+              </li>
+              <li role="button" onClick={() => handleMenuItemClick("#product-modules")}>
+                <span>Modules</span>
+              </li>
+              <li role="button" onClick={() => handleMenuItemClick("#product-oversight")}>
+                <span>Oversight</span>
+              </li>
+              <li role="button" onClick={() => handleMenuItemClick("#pricing")}>
+                <span>Pricing</span>
+              </li>
+            </>
+          )}
           <li role="link" onClick={() => {
             navigate("/contact")
             setIsMenuOpen(false)
