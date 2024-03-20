@@ -21,7 +21,7 @@ export function LandingPage() {
             <h1>20-20 Oversight</h1>
             <p>Operating in a regulated or controlled environment?</p>
 
-            <p>We've supported dozens of companies just like yours. We're taking all this experience and designed a product for you.</p>
+            <p>We've supported dozens of companies just like yours. We're taking all this experience and designing a product for you.</p>
 
             <p>Battle-tested for the finance and healthcare industries.</p>
             {/* <a href="https://app.metis.8b.nu" className="button lg">
