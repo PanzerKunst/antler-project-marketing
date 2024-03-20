@@ -74,11 +74,12 @@
     left: 0;
     width: 100%;
 
+    padding-bottom: 8px;
     border-radius: 0;
     @include drop-shadow;
 
     > li {
-      padding-inline: 1.9em;
+      justify-content: center;
     }
   }
 }

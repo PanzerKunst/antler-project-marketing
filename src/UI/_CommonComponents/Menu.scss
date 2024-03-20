@@ -24,7 +24,6 @@ ul.styleless.menu {
     }
 
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     gap: 0.5em;
 
@@ -40,7 +39,7 @@ ul.styleless.menu {
   > .MuiModalClose-root {
     background-color: $color-app-bg;
     top: 14px;
-    right: 28px;
+    right: calc(11px + var(--scrollbar-width));
 
     > svg {
       color: $color-icon-dark;

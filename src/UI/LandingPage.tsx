@@ -1,12 +1,18 @@
-import { faCircleCheck, faCirclePlay, faEye } from "@fortawesome/free-regular-svg-icons"
+import { faCircleCheck, faEye } from "@fortawesome/free-regular-svg-icons"
 import { faArrowRightArrowLeft, faCheck, faScaleBalanced, faSitemap } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import { IconWithDualBgColor } from "./_CommonComponents/IconWithDualBgColor.tsx"
+import { useViewportSize } from "../Util/BrowserUtils.ts"
 
+import s from "/src/UI/_CommonStyles/_exports.module.scss"
 import "./LandingPage.scss"
 
 export function LandingPage() {
+  const viewportWidth = useViewportSize().width
+  const viewportWidthMd = parseInt(s.vwMd || "")
+  const isMobile = viewportWidth < viewportWidthMd
+
   return (
     <div className="page landing">
       <main>
@@ -18,12 +24,14 @@ export function LandingPage() {
             <p>We've supported dozens of companies just like yours. We're taking all this experience and designed a product for you.</p>
 
             <p>Battle-tested for the finance, healthcare and xyz industries.</p>
-            <a href="https://app.metis.8b.nu" className="button lg">
+            {/* <a href="https://app.metis.8b.nu" className="button lg">
               <FontAwesomeIcon icon={faCirclePlay}/>
               <span>Try it out</span>
-            </a>
+            </a> */}
           </div>
-          <img src="/images/landing/app-preview.png" alt="App preview"/>
+          {isMobile
+            ? <img src="/images/landing/hero-mobile.png" alt="App preview"/>
+            : <img src="/images/landing/hero-desktop.png" alt="App preview"/>}
         </section>
 
         <section id="why">
