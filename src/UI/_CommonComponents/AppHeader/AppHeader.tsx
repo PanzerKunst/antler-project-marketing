@@ -148,7 +148,7 @@ export function AppHeader() {
             <button className="button transparent" onClick={() => {
               navigate("/contact")
             }}>
-              <span>Contact us</span>
+              <span>Contact</span>
             </button>
           </nav>
         )}
@@ -176,7 +176,7 @@ export function AppHeader() {
             navigate("/contact")
             setIsMenuOpen(false)
           }}>
-            <span>Contact us</span>
+            <span>Contact</span>
           </li>
         </Menu>
         /* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-to-interactive-role */
