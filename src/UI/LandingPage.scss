@@ -61,6 +61,12 @@
       padding-top: 15vh;
 
       > div {
+        text-align: center;
+
+        @include vw(lg) {
+          text-align: left;
+        }
+
         > h1 {
           margin-bottom: 0.5em;
         }
