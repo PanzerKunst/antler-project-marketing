@@ -10,14 +10,13 @@ export function AppFooter() {
         <nav>
           <ul className="styleless">
             <li>
-              <Link to="/contact" className="underlined appears">Contact us</Link>
+              <Link to="/contact" className="underlined appears">Contact</Link>
             </li>
           </ul>
         </nav>
 
         <div>
-          <img src="/images/vite.svg" alt="logo"/>
-          <span>&copy; {dayjs().year()}<br/>Code:metis</span>
+          <span>&copy; {dayjs().year()} Code:metis</span>
         </div>
       </div>
     </footer>
