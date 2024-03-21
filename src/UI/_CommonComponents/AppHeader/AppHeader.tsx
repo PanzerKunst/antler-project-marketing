@@ -91,11 +91,7 @@ export function AppHeader() {
     <div className="app-header-wrapper">
       <header
         ref={headerRef}
-        className={classNames({
-          "desktop-or-landing": !isMobile || isLandingPage,
-          mobile: isMobile,
-          "menu-open": isMenuOpen
-        })}
+        className={classNames({ mobile: isMobile, "menu-open": isMenuOpen})}
         style={{ top: 0}}
       >
         <Link to="/">
