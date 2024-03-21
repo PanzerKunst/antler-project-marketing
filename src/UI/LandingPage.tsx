@@ -126,7 +126,6 @@ export function LandingPage() {
               <img src="/images/landing/app-preview-risk-manager.png" alt="App preview"/>
             </li>
             <li>
-              <img src="/images/landing/app-preview-risk-manager.png" alt="App preview"/>
               <div>
                 <IconWithDualBgColor>
                   <FontAwesomeIcon icon={faEye}/>
@@ -148,6 +147,7 @@ export function LandingPage() {
                   </li>
                 </ul>
               </div>
+              <img src="/images/landing/app-preview-risk-manager.png" alt="App preview"/>
             </li>
             <li>
               <div>
