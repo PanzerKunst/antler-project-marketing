@@ -141,7 +141,7 @@ export function AppHeader() {
               <>
                 <ScrollToHeaderButton label="Why" scrollToCssSelector="#why"/>
                 <ScrollToHeaderButton label="Modules" scrollToCssSelector="#product-modules"/>
-                <ScrollToHeaderButton label="Oversight" scrollToCssSelector="#product-oversight"/>
+                <ScrollToHeaderButton label="Overview" scrollToCssSelector="#product-overview"/>
                 <ScrollToHeaderButton label="Pricing" scrollToCssSelector="#pricing"/>
               </>
             )}
@@ -164,8 +164,8 @@ export function AppHeader() {
               <li role="button" onClick={() => handleMenuItemClick("#product-modules")}>
                 <span>Modules</span>
               </li>
-              <li role="button" onClick={() => handleMenuItemClick("#product-oversight")}>
-                <span>Oversight</span>
+              <li role="button" onClick={() => handleMenuItemClick("#product-overview")}>
+                <span>Overview</span>
               </li>
               <li role="button" onClick={() => handleMenuItemClick("#pricing")}>
                 <span>Pricing</span>

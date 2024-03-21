@@ -3,6 +3,11 @@
 .page.landing > main {
   margin-block: 0;
 
+  margin-inline: $min-content-side-margin;
+  @include vw(lg) {
+    margin-inline: 0;
+  }
+
   $side-padding-text-block: 8vw;
 
   .text-block-and-img {
@@ -11,7 +16,7 @@
     gap: 3vh;
 
     @include vw(lg) {
-      gap: 3vw;
+      gap: 5em;
       display: grid;
       grid-template-columns: 1fr 1fr;
 
@@ -26,7 +31,7 @@
   }
 
   > section {
-    padding-block: 7vmax;
+    padding-block: 5em;
 
     &:nth-of-type(even) {
       background-color: $color-offset-bg;
@@ -167,13 +172,13 @@
       }
     }
 
-    &#product-oversight > div {
+    &#product-overview > div {
       display: flex;
       flex-direction: column;
       gap: 3vh;
 
       @include vw(lg) {
-        gap: 3vw;
+        gap: 5em;
         display: grid;
         grid-template-columns: 1fr 1fr;
       }
@@ -233,15 +238,6 @@
           }
         }
       }
-    }
-  }
-
-  // Side-margins on mobile
-  @include vw(sm) {
-    #hero,
-    #product-modules,
-    #product-oversight {
-      padding-inline: $min-content-side-margin;
     }
   }
 }

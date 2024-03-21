@@ -21,9 +21,13 @@ export function LandingPage() {
             <h1>20-20 Oversight</h1>
             <p>Operating in a regulated or controlled environment?</p>
 
-            <p>We've supported dozens of companies just like yours. We're taking all this experience and designing a product for you.</p>
+            <p>Are you growing and are finding it harder to keep track of the key elements of your business?</p>
 
-            <p>Battle-tested for the finance and healthcare industries.</p>
+            <p>Do external requests for information on processes, controls, risks and compliance overwhelm your main focus?</p>
+
+            <p>We have grown up supporting companies just like yours. We're taking all this experience and designing a product for you.</p>
+
+            <p>Battle-tested for finance, healthcare and insurance.</p>
             {/* <a href="https://app.metis.8b.nu" className="button lg">
               <FontAwesomeIcon icon={faCirclePlay}/>
               <span>Try it out</span>
@@ -47,35 +51,43 @@ export function LandingPage() {
                   <FontAwesomeIcon icon={faEye}/>
                 </IconWithDualBgColor>
                 <h3>No overview for the CEO</h3>
-                <p>Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here.</p>
+                <p>Siloed systems mean the CEO and Board need to request data from each department individually.</p>
               </li>
               <li>
                 <IconWithDualBgColor>
                   <FontAwesomeIcon icon={faEye}/>
                 </IconWithDualBgColor>
-                <h3>No overview for the CEO</h3>
-                <p>Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here.</p>
+                <h3>Duplicated, out-of-date data</h3>
+                <p>Siloed systems mean that basic company data is not updated or available for everyone</p>
               </li>
               <li>
                 <IconWithDualBgColor>
                   <FontAwesomeIcon icon={faEye}/>
                 </IconWithDualBgColor>
-                <h3>No overview for the CEO</h3>
-                <p>Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here.</p>
+                <h3>No scale benefits</h3>
+                <p>Each solution requires a new implementation and a new procurement process.</p>
               </li>
               <li>
                 <IconWithDualBgColor>
                   <FontAwesomeIcon icon={faEye}/>
                 </IconWithDualBgColor>
-                <h3>No overview for the CEO</h3>
-                <p>Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here.</p>
+                <h3>Unnecessary complexity</h3>
+                <p>Each system has duplicated functionality that works differently and requires understanding of new terms and workflows.</p>
               </li>
               <li>
                 <IconWithDualBgColor>
                   <FontAwesomeIcon icon={faEye}/>
                 </IconWithDualBgColor>
-                <h3>No overview for the CEO</h3>
-                <p>Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here.</p>
+                <h3>Integration costs are often expensive</h3>
+                <p>DD, RFP, Audit of each new supplier takes time, implementation is costly.</p>
+              </li>
+              <li>
+                <IconWithDualBgColor>
+                  <FontAwesomeIcon icon={faEye}/>
+                </IconWithDualBgColor>
+                <h3>Senior management work alone</h3>
+                <p>Without a common solution, each department spends time solving its problems individually making reporting and tracking basic tasks
+                  time-consuming.</p>
               </li>
             </ul>
           </div>
@@ -95,19 +107,19 @@ export function LandingPage() {
                   <FontAwesomeIcon icon={faEye}/>
                 </IconWithDualBgColor>
                 <h3>Risk Manager</h3>
-                <p>Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here.</p>
+                <p>Financial, Operational and Strategic risks – all catered for under one platform.</p>
                 <ul className="styleless">
                   <li>
                     <FontAwesomeIcon icon={faCircleCheck}/>
-                    <span>Feature</span>
+                    <span>Support for multi-level and jurisdiction organisations</span>
                   </li>
                   <li>
                     <FontAwesomeIcon icon={faCircleCheck}/>
-                    <span>Another feature</span>
+                    <span>Risk library and risk instances fully customiseable</span>
                   </li>
                   <li>
                     <FontAwesomeIcon icon={faCircleCheck}/>
-                    <span>Feature</span>
+                    <span>Audited review, allocation and tracking of risks</span>
                   </li>
                 </ul>
               </div>
@@ -120,19 +132,19 @@ export function LandingPage() {
                   <FontAwesomeIcon icon={faEye}/>
                 </IconWithDualBgColor>
                 <h3>Contract Manager</h3>
-                <p>Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here.</p>
+                <p>Keep your documents, key data, legal entities in one place.</p>
                 <ul className="styleless">
                   <li>
                     <FontAwesomeIcon icon={faCircleCheck}/>
-                    <span>Feature</span>
+                    <span>Simple periodic audits and follow up of vendors</span>
                   </li>
                   <li>
                     <FontAwesomeIcon icon={faCircleCheck}/>
-                    <span>Another feature</span>
+                    <span>Resources for Legal, Sales, Procurement & Vendor Management</span>
                   </li>
                   <li>
                     <FontAwesomeIcon icon={faCircleCheck}/>
-                    <span>Feature</span>
+                    <span>Track agreements by type, counterparty and conditions</span>
                   </li>
                 </ul>
               </div>
@@ -143,19 +155,19 @@ export function LandingPage() {
                   <FontAwesomeIcon icon={faEye}/>
                 </IconWithDualBgColor>
                 <h3>Compliance Manager</h3>
-                <p>Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here.</p>
+                <p>Managing Policies, Instructions, Guidelines, Handbooks.</p>
                 <ul className="styleless">
                   <li>
                     <FontAwesomeIcon icon={faCircleCheck}/>
-                    <span>Feature</span>
+                    <span>Hierarchy of Rules, Instructions, Policies</span>
                   </li>
                   <li>
                     <FontAwesomeIcon icon={faCircleCheck}/>
-                    <span>Another feature</span>
+                    <span>Simple review, approve and publish workflow</span>
                   </li>
                   <li>
                     <FontAwesomeIcon icon={faCircleCheck}/>
-                    <span>Feature</span>
+                    <span>Auditable history of all changes</span>
                   </li>
                 </ul>
               </div>
@@ -164,10 +176,10 @@ export function LandingPage() {
           </ul>
         </section>
 
-        <section id="product-oversight">
+        <section id="product-overview">
           <header>
             <span>Code:metis</span>
-            <h2>Oversight for your company</h2>
+            <h2>Overview for your company</h2>
             <p>All Code:metis modules share a single source of truth for your company data.</p>
           </header>
 
@@ -179,7 +191,7 @@ export function LandingPage() {
                 </div>
                 <div>
                   <h3>Company legal structure</h3>
-                  <p>Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here.</p>
+                  <p>Track and map your ownership structure, jurisdictions, boards, officers.</p>
                 </div>
               </li>
               <li>
@@ -187,8 +199,8 @@ export function LandingPage() {
                   <FontAwesomeIcon icon={faSitemap}/>
                 </div>
                 <div>
-                  <h3>Company legal structure</h3>
-                  <p>Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here.</p>
+                  <h3>Company management structure</h3>
+                  <p>Track and map your management structure, departments, divisions, units, managers.</p>
                 </div>
               </li>
               <li>
@@ -196,8 +208,9 @@ export function LandingPage() {
                   <FontAwesomeIcon icon={faArrowRightArrowLeft}/>
                 </div>
                 <div>
-                  <h3>Company legal structure</h3>
-                  <p>Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here.</p>
+                  <h3>Connect Code:metis to your IT infrastructure</h3>
+                  <p>Connect with your existing applications via our REST API. For example: feed your incidents or contracts from existing
+                    solutions for an overview in Code:metis.</p>
                 </div>
               </li>
             </ul>
