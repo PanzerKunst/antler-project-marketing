@@ -58,7 +58,7 @@ export function LandingPage() {
                   <FontAwesomeIcon icon={faEye}/>
                 </IconWithDualBgColor>
                 <h3>Duplicated, out-of-date data</h3>
-                <p>Siloed systems mean that basic company data is not updated or available for everyone</p>
+                <p>Siloed systems mean that basic company data is not updated or available for everyone.</p>
               </li>
               <li>
                 <IconWithDualBgColor>
@@ -86,7 +86,7 @@ export function LandingPage() {
                   <FontAwesomeIcon icon={faEye}/>
                 </IconWithDualBgColor>
                 <h3>Senior management work alone</h3>
-                <p>Without a common solution, each department spends time solving its problems individually making reporting and tracking basic tasks
+                <p>Without a common solution, each department solves its problems individually, making reporting and tracking basic tasks
                   time-consuming.</p>
               </li>
             </ul>
@@ -234,69 +234,123 @@ export function LandingPage() {
                   <div className="icon-with-bg-color">
                     <FontAwesomeIcon icon={faCheck}/>
                   </div>
-                  <span>Feature</span>
+                  <span>All modules: Risks, Contracts, Compliance</span>
                 </li>
                 <li>
                   <div className="icon-with-bg-color">
                     <FontAwesomeIcon icon={faCheck}/>
                   </div>
-                  <span>Another feature</span>
+                  <span>Legal and Management database</span>
                 </li>
                 <li>
                   <div className="icon-with-bg-color">
                     <FontAwesomeIcon icon={faCheck}/>
                   </div>
-                  <span>Feature</span>
+                  <span><strong>Links</strong> to One Drive or Google Drive</span>
+                </li>
+                <li>
+                  <div className="icon-with-bg-color">
+                    <FontAwesomeIcon icon={faCheck}/>
+                  </div>
+                  <span><strong>1 year</strong> audit history of all changes</span>
+                </li>
+                <li>
+                  <div className="icon-with-bg-color">
+                    <FontAwesomeIcon icon={faCheck}/>
+                  </div>
+                  <span>Priority email support</span>
+                </li>
+                <li>
+                  <div className="icon-with-bg-color">
+                    <FontAwesomeIcon icon={faCheck}/>
+                  </div>
+                  <span>Up to 50 individual users</span>
                 </li>
               </ul>
               <button className="button"><span>Get started</span></button>
             </li>
             <li>
-              <span>$699/mth</span>
+              <span>$1 499/mth</span>
               <h3>Business plan</h3>
               <ul className="styleless">
                 <li>
                   <div className="icon-with-bg-color">
                     <FontAwesomeIcon icon={faCheck}/>
                   </div>
-                  <span>Feature</span>
+                  <span>All modules: Risks, Contracts, Compliance</span>
                 </li>
                 <li>
                   <div className="icon-with-bg-color">
                     <FontAwesomeIcon icon={faCheck}/>
                   </div>
-                  <span>Another feature</span>
+                  <span>Legal and Management database</span>
                 </li>
                 <li>
                   <div className="icon-with-bg-color">
                     <FontAwesomeIcon icon={faCheck}/>
                   </div>
-                  <span>Feature</span>
+                  <span><strong>Full integration</strong> with One Drive or Google Drive</span>
+                </li>
+                <li>
+                  <div className="icon-with-bg-color">
+                    <FontAwesomeIcon icon={faCheck}/>
+                  </div>
+                  <span><strong>5 year</strong> audit history of all changes</span>
+                </li>
+                <li>
+                  <div className="icon-with-bg-color">
+                    <FontAwesomeIcon icon={faCheck}/>
+                  </div>
+                  <span>Priority email support</span>
+                </li>
+                <li>
+                  <div className="icon-with-bg-color">
+                    <FontAwesomeIcon icon={faCheck}/>
+                  </div>
+                  <span>Up to 100 individual users</span>
                 </li>
               </ul>
               <button className="button"><span>Get started</span></button>
             </li>
             <li>
-              <span>$899/mth</span>
+              <span>$14 500/mth</span>
               <h3>Enterprise plan</h3>
               <ul className="styleless">
                 <li>
                   <div className="icon-with-bg-color">
                     <FontAwesomeIcon icon={faCheck}/>
                   </div>
-                  <span>Feature</span>
+                  <span>All modules: Risks, Contracts, Compliance</span>
                 </li>
                 <li>
                   <div className="icon-with-bg-color">
                     <FontAwesomeIcon icon={faCheck}/>
                   </div>
-                  <span>Another feature</span>
+                  <span>Legal and Management database</span>
                 </li>
                 <li>
                   <div className="icon-with-bg-color">
                     <FontAwesomeIcon icon={faCheck}/>
                   </div>
-                  <span>Feature</span>
+                  <span><strong>Full integration</strong> with One Drive or Google Drive</span>
+                </li>
+                <li>
+                  <div className="icon-with-bg-color">
+                    <FontAwesomeIcon icon={faCheck}/>
+                  </div>
+                  <span><strong>10 year</strong> audit history of all changes</span>
+                </li>
+                <li>
+                  <div className="icon-with-bg-color">
+                    <FontAwesomeIcon icon={faCheck}/>
+                  </div>
+                  <span>Priority email and phone support</span>
+                </li>
+                <li>
+                  <div className="icon-with-bg-color">
+                    <FontAwesomeIcon icon={faCheck}/>
+                  </div>
+                  <span>Unlimited individual users</span>
                 </li>
               </ul>
               <button className="button"><span>Get started</span></button>

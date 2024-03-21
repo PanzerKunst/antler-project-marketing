@@ -222,7 +222,7 @@
         }
 
         > ul {
-           width: 280px;
+           width: 300px;
 
           display: flex;
           flex-direction: column;
@@ -235,6 +235,11 @@
             display: flex;
             align-items: center;
             gap: 0.5em;
+
+            // stylelint-disable-next-line max-nesting-depth
+            > .icon-with-bg-color {
+              flex-shrink: 0;
+            }
           }
         }
       }
