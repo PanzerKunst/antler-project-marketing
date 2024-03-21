@@ -5,7 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom"
 
 import { ScrollToHeaderButton } from "./ScrollToHeaderButton.tsx"
 import { useAppContext } from "../../../AppContext.tsx"
-import { scrollIntoView, useViewportSize } from "../../../Util/BrowserUtils.ts"
+import { scrollIntoView, useNavigationEvent, useViewportSize } from "../../../Util/BrowserUtils.ts"
 
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 
@@ -33,6 +33,10 @@ export function AppHeader() {
   const headerRef = useRef<HTMLHeadingElement>(null)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  useNavigationEvent(() => {
+    console.log("Navigating")
+  })
+
   useEffect(() => {
     const header = headerRef.current
 
@@ -40,39 +44,9 @@ export function AppHeader() {
       return
     }
 
-    const handleScroll = !isMobile || isLandingPage ? handleScrollDesktop : handleScrollMobile
+    console.log("useEffect")
 
-    function handleScrollMobile() {
-      const currentScrollY = window.scrollY
-      const delta = currentScrollY - lastScrollY
-      const headerBottomPos = parseInt(header!.style.bottom)
-
-      // Header always shown when scrolled near the top
-      let newBottomPos = 0
-
-      if (currentScrollY > 100) {
-        if (currentScrollY > lastScrollY) { // Scrolling down
-          const isHeaderFullyHidden = headerBottomPos === -headerHeight
-
-          newBottomPos = isHeaderFullyHidden
-            ? -headerHeight
-            : Math.max(headerBottomPos - delta, -headerHeight)
-
-        } else { // Scrolling up
-          const isHeaderFullyVisible = headerBottomPos === 0
-
-          newBottomPos = isHeaderFullyVisible
-            ? 0
-            : Math.min(headerBottomPos - delta, 0)
-        }
-      }
-
-      header!.style.bottom = `${newBottomPos}px`
-
-      lastScrollY = currentScrollY
-    }
-
-    function handleScrollDesktop() {
+    function handleScroll() {
       const currentScrollY = window.scrollY
       const delta = currentScrollY - lastScrollY
       const headerTopPos = parseInt(header!.style.top)
@@ -105,7 +79,7 @@ export function AppHeader() {
     window.addEventListener("scroll", handleScroll, { passive: true })
 
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [isLandingPage, isMobile])
+  }, [])
 
   const handleMenuItemClick = (cssSelector: string) => {
     setIsMenuOpen(false)
