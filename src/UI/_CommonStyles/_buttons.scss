@@ -52,15 +52,6 @@ a.button:not(.icon-only) {
     border-radius: 1.2em;
   }
 
-  &.transparent {
-    background-image: none;
-    color: $color-btn-text-transparent-btn;
-
-    &:not([disabled]):hover {
-      color: $color-btn-text-transparent-btn-hover;
-    }
-  }
-
   &.danger {
     background-image: none;
     background-color: $color-btn-bg-danger;

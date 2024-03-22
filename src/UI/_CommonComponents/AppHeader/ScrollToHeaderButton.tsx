@@ -15,8 +15,6 @@ export function ScrollToHeaderButton({ label, scrollToCssSelector, onClick = () 
   }
 
   return (
-    <button className="button transparent" onClick={handleClick}>
-      <span>{label}</span>
-    </button>
+    <button className="underlined appears" onClick={handleClick}>{label}</button>
   )
 }

@@ -45,13 +45,16 @@
     }
 
     > nav {
-      > button > span,
-      > a {
+      > button {
         $size: $font-size-xxs;
 
         font-size: $size;
         line-height: $size; // Vertical centering
         font-weight: 600;
+
+        &:not(:last-child) {
+          margin-right: 1em;
+        }
       }
     }
 

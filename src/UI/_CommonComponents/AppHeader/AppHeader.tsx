@@ -115,11 +115,7 @@ export function AppHeader() {
                 <ScrollToHeaderButton label="Pricing" scrollToCssSelector="#pricing"/>
               </>
             )}
-            <button className="button transparent" onClick={() => {
-              navigate("/contact")
-            }}>
-              <span>Contact</span>
-            </button>
+            <button className="underlined appears" onClick={() => { navigate("/contact") }}>Contact</button>
           </nav>
         )}
       </header>
