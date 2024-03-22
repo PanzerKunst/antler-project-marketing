@@ -109,7 +109,7 @@ export function AppHeader() {
           <nav>
             {isLandingPage && (
               <>
-                <ScrollToHeaderButton label="Why" scrollToCssSelector="#why"/>
+                <ScrollToHeaderButton label="Why?" scrollToCssSelector="#why"/>
                 <ScrollToHeaderButton label="Modules" scrollToCssSelector="#product-modules"/>
                 <ScrollToHeaderButton label="Overview" scrollToCssSelector="#product-overview"/>
                 <ScrollToHeaderButton label="Pricing" scrollToCssSelector="#pricing"/>

@@ -1,14 +1,12 @@
 import { faCircleCheck } from "@fortawesome/free-regular-svg-icons"
 import {
-  faArrowDown,
   faArrowRightArrowLeft,
+  faArrowsToDot,
   faCheck,
-  faCoins,
   faEye,
   faFileSignature,
   faMaximize,
-  faPeopleArrows,
-  faSackDollar,
+  faPeopleGroup,
   faScaleBalanced,
   faSitemap,
   faSliders,
@@ -16,13 +14,11 @@ import {
   faTriangleExclamation
 } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 
 import { FadeIn } from "./_CommonComponents/FadeIn.tsx"
 import { IconWithDualBgColor } from "./_CommonComponents/IconWithDualBgColor.tsx"
 import { ScrollDownIndicator } from "./_CommonComponents/ScrollDownIndicator.tsx"
-import { scrollIntoView } from "../Util/BrowserUtils.ts"
 
 import s from "/src/UI/_CommonStyles/_exports.module.scss"
 import "./LandingPage.scss"
@@ -58,52 +54,45 @@ export function LandingPage() {
         <section id="why">
           <div className="container">
             <header>
-              <span>Why</span>
-              <h2>Traditional control systems are siloed</h2>
-              <p>Legal, Risk, Compliance, Operations, IT, Procurement. All these departments using different, expensive control systems.</p>
+              <span>Why?</span>
+              <h2>Get away from siloed systems</h2>
+              <p>Combine Legal, Risk, Compliance, Operations, IT & Procurement.</p>
             </header>
             <ul className="styleless">
               <li>
                 <IconWithDualBgColor>
                   <FontAwesomeIcon icon={faEye}/>
                 </IconWithDualBgColor>
-                <h3>No overview for the CEO</h3>
+                <h3>Full overview for the CEO and Board</h3>
                 <p>Siloed systems mean the CEO and Board need to request data from each department individually.</p>
               </li>
               <li>
                 <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faCoins}/>
+                  <FontAwesomeIcon icon={faArrowsToDot} />
                 </IconWithDualBgColor>
-                <h3>Duplicated, out-of-date data</h3>
+                <h3>Golden source of truth</h3>
                 <p>Siloed systems mean that basic company data is not updated or available for everyone.</p>
               </li>
               <li>
                 <IconWithDualBgColor>
                   <FontAwesomeIcon icon={faMaximize}/>
                 </IconWithDualBgColor>
-                <h3>No scale benefits</h3>
-                <p>Each solution requires a new implementation and a new procurement process.</p>
+                <h3>Gain benefits of scale</h3>
+                <p>Multiple solutions require multiple implementations and procurement processes.</p>
               </li>
               <li>
                 <IconWithDualBgColor>
                   <FontAwesomeIcon icon={faSliders}/>
                 </IconWithDualBgColor>
-                <h3>Unnecessary complexity</h3>
+                <h3>Reduce complexity</h3>
                 <p>Each system has duplicated functionality that works differently and requires understanding of new terms and workflows.</p>
               </li>
               <li>
                 <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faSackDollar}/>
+                  <FontAwesomeIcon icon={faPeopleGroup} />
                 </IconWithDualBgColor>
-                <h3>Integration costs are often expensive</h3>
-                <p>DD, RFP, Audit of each new supplier takes time, implementation is costly.</p>
-              </li>
-              <li>
-                <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faPeopleArrows}/>
-                </IconWithDualBgColor>
-                <h3>Senior management work alone</h3>
-                <p>Without a common solution, each department solves its problems individually, making reporting and tracking basic tasks
+                <h3>Senior management works together</h3>
+                <p>In siloed solutions, each department solves its problems individually, making reporting and tracking basic tasks
                   time-consuming.</p>
               </li>
             </ul>
@@ -249,8 +238,7 @@ export function LandingPage() {
           <ul className="styleless">
             <li>
               <div className="pricing-data">
-                <span className="price">$499/mth</span>
-                <span className="billing-period">Billed annally</span>
+                <span>$499/mth</span>
                 <h3>Starter plan</h3>
                 <ul className="styleless">
                   <li>
@@ -281,7 +269,7 @@ export function LandingPage() {
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span>Priority email support</span>
+                    <span>Best effort email support</span>
                   </li>
                   <li>
                     <div className="icon-with-bg-color">
@@ -297,8 +285,7 @@ export function LandingPage() {
             </li>
             <li>
               <div className="pricing-data">
-                <span className="price">$1 499/mth</span>
-                <span className="billing-period">Billed annally</span>
+                <span>$1 499/mth</span>
                 <h3>Business plan</h3>
                 <ul className="styleless">
                   <li>
@@ -345,8 +332,7 @@ export function LandingPage() {
             </li>
             <li>
               <div className="pricing-data">
-                <span className="price">$14 500/mth</span>
-                <span className="billing-period">Billed annally</span>
+                <span>Contact us</span>
                 <h3>Enterprise plan</h3>
                 <ul className="styleless">
                   <li>

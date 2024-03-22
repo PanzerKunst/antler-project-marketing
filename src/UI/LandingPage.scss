@@ -253,12 +253,12 @@
       flex-direction: column;
       align-items: center;
 
-      > .price {
+      > span {
         color: $color-heading;
         font-size: $font-size-xl;
         font-weight: 600;
 
-        margin-block: 40px 8px;
+        margin-top: 40px;
       }
 
       > h3 {
