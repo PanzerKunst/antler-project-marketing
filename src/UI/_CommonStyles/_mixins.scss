@@ -100,14 +100,6 @@
   background-image: linear-gradient(to right, $color-btn-bg-primary-gradient-start, $color-btn-bg-primary-gradient-end);
 }
 
-@mixin header-footer-text {
-  $size: $font-size-xxs;
-
-  font-size: $size;
-  line-height: $size; // Vertical centering
-  font-weight: 600;
-}
-
 @mixin underlined {
   @include to-right-red-gradient;
   background-repeat: no-repeat;

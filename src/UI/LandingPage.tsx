@@ -2,22 +2,29 @@ import { faCircleCheck } from "@fortawesome/free-regular-svg-icons"
 import {
   faArrowDown,
   faArrowRightArrowLeft,
-  faCheck, faChevronDown,
-  faCoins, faEye,
+  faCheck,
+  faCoins,
+  faEye,
   faFileSignature,
   faMaximize,
   faPeopleArrows,
   faSackDollar,
   faScaleBalanced,
   faSitemap,
-  faSliders, faSquareCheck,
+  faSliders,
+  faSquareCheck,
   faTriangleExclamation
 } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { motion } from "framer-motion"
+import { Link } from "react-router-dom"
 
+import { FadeIn } from "./_CommonComponents/FadeIn.tsx"
 import { IconWithDualBgColor } from "./_CommonComponents/IconWithDualBgColor.tsx"
+import { ScrollDownIndicator } from "./_CommonComponents/ScrollDownIndicator.tsx"
 import { scrollIntoView } from "../Util/BrowserUtils.ts"
 
+import s from "/src/UI/_CommonStyles/_exports.module.scss"
 import "./LandingPage.scss"
 
 export function LandingPage() {
@@ -26,23 +33,19 @@ export function LandingPage() {
       <main>
         <section id="hero" className="text-block-and-img">
           <div>
-            <h1>20-20 Oversight</h1>
-            <p>Operating in a regulated or controlled environment?</p>
+            <FadeIn duration={s.animationDurationMd}>
+              <h1>20-20 Oversight</h1>
+            </FadeIn>
 
-            <p>Do external requests for information on processes, controls, risks and compliance overwhelm your main focus?</p>
+            <FadeIn delay={0.4} duration={s.animationDurationMd}>
+              <p>Operating in a regulated or controlled environment?</p>
+              <p>We have grown up supporting companies just like yours. We're taking all this experience and designing a product for you.</p>
+              <p>Battle-tested for finance, healthcare and insurance.</p>
+            </FadeIn>
 
-            <p>We have grown up supporting companies just like yours. We're taking all this experience and designing a product for you.</p>
-
-            <p>Battle-tested for finance, healthcare and insurance.</p>
-
-            <button className="button lg" onClick={() => {
-              const scrollToElement = document.querySelector("#why")
-              scrollIntoView(scrollToElement)
-            }}>
-              <FontAwesomeIcon icon={faArrowDown}/>
-              <span>Learn More</span>
-              <FontAwesomeIcon icon={faArrowDown}/>
-            </button>
+            <FadeIn delay={0.7} duration={s.animationDurationMd}>
+              <ScrollDownIndicator targetCssSelector="#why"/>
+            </FadeIn>
             {/* <a href="https://app.metis.8b.nu" className="button lg">
               <FontAwesomeIcon icon={faCirclePlay}/>
               <span>Try it out</span>
@@ -245,133 +248,148 @@ export function LandingPage() {
 
           <ul className="styleless">
             <li>
-              <span>$499/mth</span>
-              <h3>Starter plan</h3>
-              <ul className="styleless">
-                <li>
-                  <div className="icon-with-bg-color">
-                    <FontAwesomeIcon icon={faCheck}/>
-                  </div>
-                  <span>All modules: Risks, Contracts, Compliance</span>
-                </li>
-                <li>
-                  <div className="icon-with-bg-color">
-                    <FontAwesomeIcon icon={faCheck}/>
-                  </div>
-                  <span>Legal and Management database</span>
-                </li>
-                <li>
-                  <div className="icon-with-bg-color">
-                    <FontAwesomeIcon icon={faCheck}/>
-                  </div>
-                  <span><strong>Links</strong> to One Drive or Google Drive</span>
-                </li>
-                <li>
-                  <div className="icon-with-bg-color">
-                    <FontAwesomeIcon icon={faCheck}/>
-                  </div>
-                  <span><strong>1 year</strong> audit history of all changes</span>
-                </li>
-                <li>
-                  <div className="icon-with-bg-color">
-                    <FontAwesomeIcon icon={faCheck}/>
-                  </div>
-                  <span>Priority email support</span>
-                </li>
-                <li>
-                  <div className="icon-with-bg-color">
-                    <FontAwesomeIcon icon={faCheck}/>
-                  </div>
-                  <span>Up to 50 individual users</span>
-                </li>
-              </ul>
-              <button className="button"><span>Get started</span></button>
+              <div className="pricing-data">
+                <span className="price">$499/mth</span>
+                <span className="billing-period">Billed annally</span>
+                <h3>Starter plan</h3>
+                <ul className="styleless">
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span>All modules: Risks, Contracts, Compliance</span>
+                  </li>
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span>Legal and Management database</span>
+                  </li>
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span><strong>Links</strong> to One Drive or Google Drive</span>
+                  </li>
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span><strong>1 year</strong> audit history of all changes</span>
+                  </li>
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span>Priority email support</span>
+                  </li>
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span>Up to 50 individual users</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="pricing-cta">
+                <Link to="/contact" className="underlined appears">CONTACT US</Link>
+              </div>
             </li>
             <li>
-              <span>$1 499/mth</span>
-              <h3>Business plan</h3>
-              <ul className="styleless">
-                <li>
-                  <div className="icon-with-bg-color">
-                    <FontAwesomeIcon icon={faCheck}/>
-                  </div>
-                  <span>All modules: Risks, Contracts, Compliance</span>
-                </li>
-                <li>
-                  <div className="icon-with-bg-color">
-                    <FontAwesomeIcon icon={faCheck}/>
-                  </div>
-                  <span>Legal and Management database</span>
-                </li>
-                <li>
-                  <div className="icon-with-bg-color">
-                    <FontAwesomeIcon icon={faCheck}/>
-                  </div>
-                  <span><strong>Full integration</strong> with One Drive or Google Drive</span>
-                </li>
-                <li>
-                  <div className="icon-with-bg-color">
-                    <FontAwesomeIcon icon={faCheck}/>
-                  </div>
-                  <span><strong>5 year</strong> audit history of all changes</span>
-                </li>
-                <li>
-                  <div className="icon-with-bg-color">
-                    <FontAwesomeIcon icon={faCheck}/>
-                  </div>
-                  <span>Priority email support</span>
-                </li>
-                <li>
-                  <div className="icon-with-bg-color">
-                    <FontAwesomeIcon icon={faCheck}/>
-                  </div>
-                  <span>Up to 100 individual users</span>
-                </li>
-              </ul>
-              <button className="button"><span>Get started</span></button>
+              <div className="pricing-data">
+                <span className="price">$1 499/mth</span>
+                <span className="billing-period">Billed annally</span>
+                <h3>Business plan</h3>
+                <ul className="styleless">
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span>All modules: Risks, Contracts, Compliance</span>
+                  </li>
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span>Legal and Management database</span>
+                  </li>
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span><strong>Full integration</strong> with One Drive or Google Drive</span>
+                  </li>
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span><strong>5 year</strong> audit history of all changes</span>
+                  </li>
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span>Priority email support</span>
+                  </li>
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span>Up to 100 individual users</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="pricing-cta">
+                <Link to="/contact" className="underlined appears">CONTACT US</Link>
+              </div>
             </li>
             <li>
-              <span>$14 500/mth</span>
-              <h3>Enterprise plan</h3>
-              <ul className="styleless">
-                <li>
-                  <div className="icon-with-bg-color">
-                    <FontAwesomeIcon icon={faCheck}/>
-                  </div>
-                  <span>All modules: Risks, Contracts, Compliance</span>
-                </li>
-                <li>
-                  <div className="icon-with-bg-color">
-                    <FontAwesomeIcon icon={faCheck}/>
-                  </div>
-                  <span>Legal and Management database</span>
-                </li>
-                <li>
-                  <div className="icon-with-bg-color">
-                    <FontAwesomeIcon icon={faCheck}/>
-                  </div>
-                  <span><strong>Full integration</strong> with One Drive or Google Drive</span>
-                </li>
-                <li>
-                  <div className="icon-with-bg-color">
-                    <FontAwesomeIcon icon={faCheck}/>
-                  </div>
-                  <span><strong>10 year</strong> audit history of all changes</span>
-                </li>
-                <li>
-                  <div className="icon-with-bg-color">
-                    <FontAwesomeIcon icon={faCheck}/>
-                  </div>
-                  <span>Priority email and phone support</span>
-                </li>
-                <li>
-                  <div className="icon-with-bg-color">
-                    <FontAwesomeIcon icon={faCheck}/>
-                  </div>
-                  <span>Unlimited individual users</span>
-                </li>
-              </ul>
-              <button className="button"><span>Get started</span></button>
+              <div className="pricing-data">
+                <span className="price">$14 500/mth</span>
+                <span className="billing-period">Billed annally</span>
+                <h3>Enterprise plan</h3>
+                <ul className="styleless">
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span>All modules: Risks, Contracts, Compliance</span>
+                  </li>
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span>Legal and Management database</span>
+                  </li>
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span><strong>Full integration</strong> with One Drive or Google Drive</span>
+                  </li>
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span><strong>10 year</strong> audit history of all changes</span>
+                  </li>
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span>Priority email and phone support</span>
+                  </li>
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span>Unlimited individual users</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="pricing-cta">
+                <Link to="/contact" className="underlined appears">CONTACT US</Link>
+              </div>
             </li>
           </ul>
         </section>

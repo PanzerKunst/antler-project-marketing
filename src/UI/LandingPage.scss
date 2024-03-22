@@ -93,19 +93,15 @@
 
         text-align: center;
 
-        @include vw(lg) {
-          text-align: left;
-        }
-
-        > h1 {
+        h1 {
           margin-bottom: 0.5em;
         }
 
-        > p {
+        p {
           margin-bottom: 1em;
         }
 
-        > button {
+        > .scroll-down-indicator {
           margin-top: 5%;
           align-self: center;
         }
@@ -232,6 +228,8 @@
       }
     }
 
+    $pricing-card-border-radius: $border-radius-xl;
+
     &#pricing > ul {
       display: flex;
       flex-wrap: wrap;
@@ -240,43 +238,68 @@
 
       > li {
         border: 1px solid $color-border;
-        border-radius: $border-radius-xl;
-        padding: 2em 1.5em 1.5em;
+        border-radius: $pricing-card-border-radius;
         @include drop-shadow(sm);
 
         display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 1.5em;
+        justify-content: space-between;
+      }
+    }
 
-        > span {
-          color: $color-heading;
-          font-size: $font-size-xl;
-          font-weight: 600;
-        }
 
-        > ul {
-           width: 300px;
+    .pricing-data {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      > .price {
+        color: $color-heading;
+        font-size: $font-size-xl;
+        font-weight: 600;
+
+        margin-block: 40px 8px;
+      }
+
+      > h3 {
+        margin-top: 20px;
+      }
+
+      > ul {
+        width: 300px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        margin: 2em 1.5em;
+
+        > li {
+          flex-grow: 1;
 
           display: flex;
-          flex-direction: column;
+          align-items: center;
           gap: 0.5em;
 
-          // stylelint-disable-next-line max-nesting-depth
-          > li {
-            flex-grow: 1;
-
-            display: flex;
-            align-items: center;
-            gap: 0.5em;
-
-            // stylelint-disable-next-line max-nesting-depth
-            > .icon-with-bg-color {
-              flex-shrink: 0;
-            }
+          > .icon-with-bg-color {
+            flex-shrink: 0;
           }
         }
       }
+    }
+
+    .pricing-cta {
+      display: flex;
+      justify-content: center;
+
+      padding-block: 1.5em;
+
+      background-color: $color-offset-bg;
+      border-top: 1px solid $color-border;
+
+      // To avoid the bg color to overflow over the parent's border-radius
+      border-bottom-left-radius: $pricing-card-border-radius;
+      border-bottom-right-radius: $pricing-card-border-radius;
     }
   }
 }

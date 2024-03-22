@@ -47,7 +47,11 @@
     > nav {
       > button > span,
       > a {
-        @include header-footer-text;
+        $size: $font-size-xxs;
+
+        font-size: $size;
+        line-height: $size; // Vertical centering
+        font-weight: 600;
       }
     }
 
