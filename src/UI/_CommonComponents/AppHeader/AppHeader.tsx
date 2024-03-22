@@ -5,7 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom"
 
 import { ScrollToHeaderButton } from "./ScrollToHeaderButton.tsx"
 import { useAppContext } from "../../../AppContext.tsx"
-import { scrollIntoView, useNavigationEvent, useViewportSize } from "../../../Util/BrowserUtils.ts"
+import { scrollIntoView, useViewportSize } from "../../../Util/BrowserUtils.ts"
 
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 
