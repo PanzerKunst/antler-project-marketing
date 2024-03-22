@@ -33,18 +33,12 @@ export function AppHeader() {
   const headerRef = useRef<HTMLHeadingElement>(null)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  useNavigationEvent(() => {
-    console.log("Navigating")
-  })
-
   useEffect(() => {
     const header = headerRef.current
 
     if (!header) {
       return
     }
-
-    console.log("useEffect")
 
     function handleScroll() {
       const currentScrollY = window.scrollY
