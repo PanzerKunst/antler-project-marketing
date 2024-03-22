@@ -1,18 +1,26 @@
-import { faCircleCheck, faEye } from "@fortawesome/free-regular-svg-icons"
-import { faArrowRightArrowLeft, faCheck, faScaleBalanced, faSitemap } from "@fortawesome/free-solid-svg-icons"
+import { faCircleCheck } from "@fortawesome/free-regular-svg-icons"
+import {
+  faArrowDown,
+  faArrowRightArrowLeft,
+  faCheck, faChevronDown,
+  faCoins, faEye,
+  faFileSignature,
+  faMaximize,
+  faPeopleArrows,
+  faSackDollar,
+  faScaleBalanced,
+  faSitemap,
+  faSliders, faSquareCheck,
+  faTriangleExclamation
+} from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import { IconWithDualBgColor } from "./_CommonComponents/IconWithDualBgColor.tsx"
-import { useViewportSize } from "../Util/BrowserUtils.ts"
+import { scrollIntoView } from "../Util/BrowserUtils.ts"
 
-import s from "/src/UI/_CommonStyles/_exports.module.scss"
 import "./LandingPage.scss"
 
 export function LandingPage() {
-  const viewportWidth = useViewportSize().width
-  const viewportWidthMd = parseInt(s.vwMd || "")
-  const isMobile = viewportWidth < viewportWidthMd
-
   return (
     <div className="page landing">
       <main>
@@ -21,21 +29,27 @@ export function LandingPage() {
             <h1>20-20 Oversight</h1>
             <p>Operating in a regulated or controlled environment?</p>
 
-            <p>Are you growing and are finding it harder to keep track of the key elements of your business?</p>
-
             <p>Do external requests for information on processes, controls, risks and compliance overwhelm your main focus?</p>
 
             <p>We have grown up supporting companies just like yours. We're taking all this experience and designing a product for you.</p>
 
             <p>Battle-tested for finance, healthcare and insurance.</p>
+
+            <button className="button lg" onClick={() => {
+              const scrollToElement = document.querySelector("#why")
+              scrollIntoView(scrollToElement)
+            }}>
+              <FontAwesomeIcon icon={faArrowDown}/>
+              <span>Learn More</span>
+              <FontAwesomeIcon icon={faArrowDown}/>
+            </button>
             {/* <a href="https://app.metis.8b.nu" className="button lg">
               <FontAwesomeIcon icon={faCirclePlay}/>
               <span>Try it out</span>
             </a> */}
           </div>
-          {isMobile
-            ? <img src="/images/landing/hero-mobile.png" alt="App preview"/>
-            : <img src="/images/landing/hero-desktop.png" alt="App preview"/>}
+          <img src="/images/landing/home-mobile.png" alt="App preview" className="mobile"/>
+          <img src="/images/landing/home-desktop.png" alt="App preview" className="desktop"/>
         </section>
 
         <section id="why">
@@ -55,35 +69,35 @@ export function LandingPage() {
               </li>
               <li>
                 <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faEye}/>
+                  <FontAwesomeIcon icon={faCoins}/>
                 </IconWithDualBgColor>
                 <h3>Duplicated, out-of-date data</h3>
                 <p>Siloed systems mean that basic company data is not updated or available for everyone.</p>
               </li>
               <li>
                 <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faEye}/>
+                  <FontAwesomeIcon icon={faMaximize}/>
                 </IconWithDualBgColor>
                 <h3>No scale benefits</h3>
                 <p>Each solution requires a new implementation and a new procurement process.</p>
               </li>
               <li>
                 <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faEye}/>
+                  <FontAwesomeIcon icon={faSliders}/>
                 </IconWithDualBgColor>
                 <h3>Unnecessary complexity</h3>
                 <p>Each system has duplicated functionality that works differently and requires understanding of new terms and workflows.</p>
               </li>
               <li>
                 <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faEye}/>
+                  <FontAwesomeIcon icon={faSackDollar}/>
                 </IconWithDualBgColor>
                 <h3>Integration costs are often expensive</h3>
                 <p>DD, RFP, Audit of each new supplier takes time, implementation is costly.</p>
               </li>
               <li>
                 <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faEye}/>
+                  <FontAwesomeIcon icon={faPeopleArrows}/>
                 </IconWithDualBgColor>
                 <h3>Senior management work alone</h3>
                 <p>Without a common solution, each department solves its problems individually, making reporting and tracking basic tasks
@@ -104,7 +118,7 @@ export function LandingPage() {
             <li>
               <div>
                 <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faEye}/>
+                  <FontAwesomeIcon icon={faTriangleExclamation}/>
                 </IconWithDualBgColor>
                 <h3>Risk Manager</h3>
                 <p>Financial, Operational and Strategic risks – all catered for under one platform.</p>
@@ -123,12 +137,13 @@ export function LandingPage() {
                   </li>
                 </ul>
               </div>
-              <img src="/images/landing/app-preview-risk-manager.png" alt="App preview"/>
+              <img src="/images/landing/risk-mobile.png" alt="App preview" className="mobile"/>
+              <img src="/images/landing/risk-desktop.png" alt="App preview" className="desktop"/>
             </li>
             <li>
               <div>
                 <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faEye}/>
+                  <FontAwesomeIcon icon={faFileSignature}/>
                 </IconWithDualBgColor>
                 <h3>Contract Manager</h3>
                 <p>Keep your documents, key data, legal entities in one place.</p>
@@ -147,14 +162,15 @@ export function LandingPage() {
                   </li>
                 </ul>
               </div>
-              <img src="/images/landing/app-preview-risk-manager.png" alt="App preview"/>
+              <img src="/images/landing/contract-mobile.png" alt="App preview" className="mobile"/>
+              <img src="/images/landing/contract-desktop.png" alt="App preview" className="desktop"/>
             </li>
             <li>
               <div>
                 <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faEye}/>
+                  <FontAwesomeIcon icon={faSquareCheck}/>
                 </IconWithDualBgColor>
-                <h3>Compliance Manager</h3>
+                <h3>Policy Manager</h3>
                 <p>Managing Policies, Instructions, Guidelines, Handbooks.</p>
                 <ul className="styleless">
                   <li>
@@ -171,7 +187,8 @@ export function LandingPage() {
                   </li>
                 </ul>
               </div>
-              <img src="/images/landing/app-preview-risk-manager.png" alt="App preview"/>
+              <img src="/images/landing/policy-mobile.png" alt="App preview" className="mobile"/>
+              <img src="/images/landing/policy-desktop.png" alt="App preview" className="desktop"/>
             </li>
           </ul>
         </section>
@@ -214,7 +231,8 @@ export function LandingPage() {
                 </div>
               </li>
             </ul>
-            <img src="/images/landing/app-preview.png" alt="App preview"/>
+            <img src="/images/landing/home-mobile.png" alt="App preview" className="mobile"/>
+            <img src="/images/landing/home-desktop.png" alt="App preview" className="desktop"/>
           </div>
         </section>
 

@@ -102,14 +102,20 @@ a.button:not(.icon-only) {
   }
 
 
-  // Left icon
+  // Left/right icons
 
   > svg,
   > img {
-    margin-right: 0.5em;
+    &:first-child {
+      margin-right: 0.5em;
+    }
+
+    &:last-child {
+      margin-left: 0.5em;
+    }
   }
 
-  > svg {
+  &:not(.transparent) > svg {
     color: $color-icon-light;
   }
 

@@ -5,6 +5,22 @@
 
   $side-padding-text-block: 8vw;
 
+  img {
+    &.desktop {
+      display: none;
+    }
+
+    @include vw(lg) {
+      &.mobile {
+        display: none;
+      }
+
+      &.desktop {
+        display: unset;
+      }
+    }
+  }
+
   .text-block-and-img {
     display: flex;
     flex-direction: column;
@@ -21,6 +37,10 @@
         @include vw(lg) {
           padding-top: 12%;
         }
+      }
+
+      > :last-child {
+        align-self: flex-end;
       }
     }
   }
@@ -60,7 +80,7 @@
     }
 
     &#hero,
-    &#product-oversight {
+    &#product-overview {
       padding-bottom: 0;
     }
 
@@ -68,6 +88,9 @@
       padding-top: 8em;
 
       > div {
+        display: flex;
+        flex-direction: column;
+
         text-align: center;
 
         @include vw(lg) {
@@ -82,8 +105,9 @@
           margin-bottom: 1em;
         }
 
-        > a {
+        > button {
           margin-top: 5%;
+          align-self: center;
         }
       }
     }
