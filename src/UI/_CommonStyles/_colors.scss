@@ -4,7 +4,9 @@
 $color-black: rgb(0 0 0); // #000
 $color-white: rgb(255 255 255); // #fff
 $color-gray-50: rgb(249 250 251); // #F9FAFB
+$color-gray-100: rgb(242 244 247); // #F2F4F7
 $color-gray-200: rgb(234 236 240); // #EAECF0
+$color-gray-400: rgb(152 162 179); // #98A2B3
 $color-gray-500: rgb(102 112 133); // #667085
 $color-gray-600: rgb(71 84 103); // #475467
 $color-gray-700: rgb(52 64 84); // #344054
@@ -17,6 +19,7 @@ $color-brand-600: rgb(127 86 217); // #7F56D9
 $color-brand-700: rgb(105 65 198); // #6941C6
 $color-green-100: rgb(220 250 230); // #DCFAE6
 $color-green-500: rgb(23 178 106); // #17B26A
+$color-green-700: rgb(6 118 71); // #067647
 $color-red-600: rgb(217 45 32); // #D92D20
 $color-red-700: rgb(180 35 24); // #B42318
 
@@ -44,11 +47,11 @@ $color-icon-brand: $color-brand-600;
 $color-icon-bg-1: $color-brand-100;
 $color-icon-bg-2: $color-brand-50;
 $color-icon-success: $color-green-500;
-$color-input-bg: $color-white;
+$color-input-bg: $color-gray-100;
 $color-input-bg-offset: $color-gray-900;
 $color-input-text: $color-gray-900;
 $color-input-text-offset: $color-white;
-$color-input-placeholder: $color-gray-500;
+$color-input-placeholder: $color-gray-400;
 $color-link: $color-gray-600;
 $color-list-item-bg: $color-input-bg;
 $color-list-item-bg-hover: $color-gray-50;

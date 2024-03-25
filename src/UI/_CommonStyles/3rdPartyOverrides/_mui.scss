@@ -2,7 +2,9 @@
 
 :root {
   --joy-palette-danger-500: #{$color-text-danger};
+  --joy-palette-primary-500: #{$color-brand-600};
   --joy-palette-success-solidBg: #{$color-green-500}; // stylelint-disable-line
+  --joy-palette-text-primary: #{$color-text};
   --variant-softColor: #{$color-brand-700}; // stylelint-disable-line
   --variant-softActiveColor: #{$color-brand-500}; // stylelint-disable-line
   --variant-softBg: #{$color-radio-bg}; // stylelint-disable-line
@@ -26,6 +28,7 @@
 .MuiFormControl-root {
   .MuiFormLabel-root {
     font-size: $font-size-sm;
+    margin-inline: calc($input-padding-inline - 2px);
   }
 
   .MuiInput-root {
@@ -50,7 +53,7 @@
   }
 
   .MuiFormHelperText-root {
-    font-size: $font-size-sm;
+    font-size: $font-size-xs;
   }
 }
 

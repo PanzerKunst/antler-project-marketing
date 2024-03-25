@@ -18,7 +18,7 @@ import { Link } from "react-router-dom"
 
 import { FadeIn } from "./_CommonComponents/FadeIn.tsx"
 import { IconWithDualBgColor } from "./_CommonComponents/IconWithDualBgColor.tsx"
-import { ScrollDownIndicator } from "./_CommonComponents/ScrollDownIndicator.tsx"
+import { SubscribeToMailingListForm } from "./_CommonComponents/SubscribeToMailingListForm.tsx"
 
 import s from "/src/UI/_CommonStyles/_exports.module.scss"
 import "./LandingPage.scss"
@@ -40,12 +40,8 @@ export function LandingPage() {
             </FadeIn>
 
             <FadeIn delay={0.7} duration={s.animationDurationMd}>
-              <ScrollDownIndicator targetCssSelector="#why"/>
+              <SubscribeToMailingListForm/>
             </FadeIn>
-            {/* <a href="https://app.metis.8b.nu" className="button lg">
-              <FontAwesomeIcon icon={faCirclePlay}/>
-              <span>Try it out</span>
-            </a> */}
           </div>
           <img src="/images/landing/home-mobile.png" alt="App preview" className="mobile"/>
           <img src="/images/landing/home-desktop.png" alt="App preview" className="desktop"/>
@@ -188,7 +184,7 @@ export function LandingPage() {
         <section id="product-overview">
           <header>
             <span>Code:metis</span>
-            <h2>Overview for your company</h2>
+            <h2>Your company's overview</h2>
             <p>All Code:metis modules share a single source of truth for your company data.</p>
           </header>
 

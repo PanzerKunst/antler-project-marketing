@@ -34,7 +34,7 @@
 
         display: none;
         @include vw(md) {
-          display: unset;
+          display: inline;
         }
       }
     }

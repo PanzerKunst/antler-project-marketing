@@ -16,7 +16,7 @@
       }
 
       &.desktop {
-        display: unset;
+        display: block;
       }
     }
   }
@@ -101,9 +101,8 @@
           margin-bottom: 1em;
         }
 
-        > .scroll-down-indicator {
-          margin-top: 5%;
-          align-self: center;
+        .subscribe-to-mailing-list {
+          margin-block: 1.5em;
         }
       }
     }

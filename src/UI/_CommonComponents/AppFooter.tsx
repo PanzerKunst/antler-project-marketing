@@ -1,22 +1,34 @@
 import dayjs from "dayjs"
 import { Link } from "react-router-dom"
 
+import { SubscribeToMailingListForm } from "./SubscribeToMailingListForm.tsx"
+
 import "./AppFooter.scss"
 
 export function AppFooter() {
   return (
     <footer className="app-footer">
       <div className="container">
-        <nav>
-          <ul className="styleless">
-            <li>
-              <Link to="/contact" className="underlined appears">Contact</Link>
-            </li>
-          </ul>
-        </nav>
+        <div>
+          <div>
+            <h3>Get notified when we launch</h3>
+            <SubscribeToMailingListForm/>
+          </div>
+          <p>Stay up to date with the latest news, announcements, and articles.</p>
+        </div>
 
         <div>
-          <span>&copy; {dayjs().year()} Code:metis</span>
+          <nav>
+            <ul className="styleless">
+              <li>
+                <Link to="/contact" className="underlined appears">Contact</Link>
+              </li>
+            </ul>
+          </nav>
+
+          <div>
+            <span>&copy; {dayjs().year()} Code:metis</span>
+          </div>
         </div>
       </div>
     </footer>
