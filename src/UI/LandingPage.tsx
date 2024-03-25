@@ -68,7 +68,7 @@ export function LandingPage() {
               </li>
               <li>
                 <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faArrowsToDot} />
+                  <FontAwesomeIcon icon={faArrowsToDot}/>
                 </IconWithDualBgColor>
                 <h3>Golden source of truth</h3>
                 <p>Siloed systems mean that basic company data is not updated or available for everyone.</p>
@@ -89,7 +89,7 @@ export function LandingPage() {
               </li>
               <li>
                 <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faPeopleGroup} />
+                  <FontAwesomeIcon icon={faPeopleGroup}/>
                 </IconWithDualBgColor>
                 <h3>Senior management works together</h3>
                 <p>In siloed solutions, each department solves its problems individually, making reporting and tracking basic tasks
@@ -233,13 +233,14 @@ export function LandingPage() {
             <span>Pricing</span>
             <h2>Simple, transparent pricing</h2>
             <p>The onboarding cost? Zero.</p>
+            {/* <h2>Sign up for 30-day free trial. No credit card required.</h2> */}
           </header>
 
           <ul className="styleless">
             <li>
               <div className="pricing-data">
                 <span>$499/mth</span>
-                <h3>Starter plan</h3>
+                <h3>Growth</h3>
                 <ul className="styleless">
                   <li>
                     <div className="icon-with-bg-color">
@@ -280,13 +281,14 @@ export function LandingPage() {
                 </ul>
               </div>
               <div className="pricing-cta">
+                {/* <button className="button">Start your free trial</button> */}
                 <Link to="/contact" className="underlined appears">CONTACT US</Link>
               </div>
             </li>
             <li>
               <div className="pricing-data">
                 <span>$1 499/mth</span>
-                <h3>Business plan</h3>
+                <h3>Business</h3>
                 <ul className="styleless">
                   <li>
                     <div className="icon-with-bg-color">
@@ -332,8 +334,8 @@ export function LandingPage() {
             </li>
             <li>
               <div className="pricing-data">
-                <span>Contact us</span>
-                <h3>Enterprise plan</h3>
+                <span>Custom</span>
+                <h3>Enterprise</h3>
                 <ul className="styleless">
                   <li>
                     <div className="icon-with-bg-color">
