@@ -1,14 +1,9 @@
+import { AnalyticsEvent } from "./Util/AnalyticsUtils.ts"
+
 declare global {
   /* eslint-disable */
   interface Window {
-    plausible: (
-      eventName: string,
-      options?: {
-        props: {
-          [key: string]: any
-        }
-      }
-    ) => void;
+    plausible: (event: AnalyticsEvent) => void;
   }
   /* eslint-disable */
 }

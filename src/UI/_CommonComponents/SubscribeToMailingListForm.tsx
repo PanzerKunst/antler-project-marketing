@@ -4,7 +4,7 @@ import { ChangeEvent, KeyboardEvent, useState } from "react"
 
 import { ButtonLoader } from "./ButtonLoader.tsx"
 import { subscribeToMailingList } from "../../Data/Apis/Backend/MailingApi.ts"
-import { Button, trackButtonClick } from "../../Util/AnalyticsUtils.ts"
+import { AnalyticsEvent, triggerAnalyticsEvent } from "../../Util/AnalyticsUtils.ts"
 import { Field, isValidEmail } from "../../Util/ValidationUtils.ts"
 
 import "./SubscribeToMailingListForm.scss"
@@ -56,7 +56,7 @@ export function SubscribeToMailingListForm() {
 
     setIsSubmittingForm(true)
     await subscribeToMailingList(emailField.value)
-    trackButtonClick(Button.SUBSCRIBE_TO_MAILING_LIST)
+    triggerAnalyticsEvent(AnalyticsEvent.SUBSCRIBE_TO_MAILING_LIST)
     setIsSubmittingForm(false)
 
     setIsSubscribed(true)
