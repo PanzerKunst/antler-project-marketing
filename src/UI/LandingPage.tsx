@@ -19,6 +19,7 @@ import { Link } from "react-router-dom"
 import { FadeIn } from "./_CommonComponents/FadeIn.tsx"
 import { IconWithDualBgColor } from "./_CommonComponents/IconWithDualBgColor.tsx"
 import { SubscribeToMailingListForm } from "./_CommonComponents/SubscribeToMailingListForm.tsx"
+import { AnalyticsEvent, triggerAnalyticsEvent } from "../Util/AnalyticsUtils.ts"
 
 import s from "/src/UI/_CommonStyles/_exports.module.scss"
 import "./LandingPage.scss"
@@ -278,7 +279,13 @@ export function LandingPage() {
               </div>
               <div className="pricing-cta">
                 {/* <button className="button">Start your free trial</button> */}
-                <Link to="/contact" className="underlined appears">CONTACT US</Link>
+                <Link
+                  to="/contact"
+                  className="underlined appears"
+                  onClick={() => triggerAnalyticsEvent(AnalyticsEvent.CLICK_PRICE_CTA, { tier: "1" })}
+                >
+                  CONTACT US
+                </Link>
               </div>
             </li>
             <li>
@@ -325,7 +332,13 @@ export function LandingPage() {
                 </ul>
               </div>
               <div className="pricing-cta">
-                <Link to="/contact" className="underlined appears">CONTACT US</Link>
+                <Link
+                  to="/contact"
+                  className="underlined appears"
+                  onClick={() => triggerAnalyticsEvent(AnalyticsEvent.CLICK_PRICE_CTA, { tier: "2" })}
+                >
+                  CONTACT US
+                </Link>
               </div>
             </li>
             <li>
@@ -372,7 +385,13 @@ export function LandingPage() {
                 </ul>
               </div>
               <div className="pricing-cta">
-                <Link to="/contact" className="underlined appears">CONTACT US</Link>
+                <Link
+                  to="/contact"
+                  className="underlined appears"
+                  onClick={() => triggerAnalyticsEvent(AnalyticsEvent.CLICK_PRICE_CTA, { tier: "3" })}
+                >
+                  CONTACT US
+                </Link>
               </div>
             </li>
           </ul>

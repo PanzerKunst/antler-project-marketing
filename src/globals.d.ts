@@ -1,11 +1,14 @@
-import { AnalyticsEvent } from "./Util/AnalyticsUtils.ts"
+import { AnalyticsEvent, AnalyticsProps } from "./Util/AnalyticsUtils.ts"
 
 declare global {
-  /* eslint-disable */
+  /* eslint-disable no-unused-vars */
   interface Window {
-    plausible: (event: AnalyticsEvent) => void;
+    plausible: (
+      event: AnalyticsEvent,
+      options?: { props: AnalyticsProps }
+    ) => void;
   }
-  /* eslint-disable */
+  /* eslint-enable no-unused-vars */
 }
 
 export {}
