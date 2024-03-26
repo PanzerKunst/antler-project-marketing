@@ -5,7 +5,6 @@ export enum AnalyticsEvent {
   CLICK_PRICE_CTA_TIER_2 = "CLICK_PRICE_CTA TIER_2",
   CLICK_PRICE_CTA_TIER_3 = "CLICK_PRICE_CTA TIER_3",
 }
-
 /* eslint-enable no-unused-vars */
 
 export type AnalyticsProps = {
@@ -13,8 +12,6 @@ export type AnalyticsProps = {
 }
 
 export function triggerAnalyticsEvent(event: AnalyticsEvent, props?: AnalyticsProps) {
-  if (!window.plausible) return
-
   const options = props ? { props } : undefined
   window.plausible(event, options)
 }
