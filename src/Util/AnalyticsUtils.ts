@@ -1,7 +1,9 @@
 /* eslint-disable no-unused-vars */
 export enum AnalyticsEvent {
   SUBSCRIBE_TO_MAILING_LIST = "SUBSCRIBE_TO_MAILING_LIST",
-  CLICK_PRICE_CTA = "CLICK_PRICE_CTA"
+  CLICK_PRICE_CTA_TIER_1 = "CLICK_PRICE_CTA TIER_1",
+  CLICK_PRICE_CTA_TIER_2 = "CLICK_PRICE_CTA TIER_2",
+  CLICK_PRICE_CTA_TIER_3 = "CLICK_PRICE_CTA TIER_3",
 }
 
 /* eslint-enable no-unused-vars */

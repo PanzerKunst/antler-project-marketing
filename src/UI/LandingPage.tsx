@@ -282,7 +282,7 @@ export function LandingPage() {
                 <Link
                   to="/contact"
                   className="underlined appears"
-                  onClick={() => triggerAnalyticsEvent(AnalyticsEvent.CLICK_PRICE_CTA, { tier: "1" })}
+                  onClick={() => triggerAnalyticsEvent(AnalyticsEvent.CLICK_PRICE_CTA_TIER_1)}
                 >
                   CONTACT US
                 </Link>
@@ -335,7 +335,7 @@ export function LandingPage() {
                 <Link
                   to="/contact"
                   className="underlined appears"
-                  onClick={() => triggerAnalyticsEvent(AnalyticsEvent.CLICK_PRICE_CTA, { tier: "2" })}
+                  onClick={() => triggerAnalyticsEvent(AnalyticsEvent.CLICK_PRICE_CTA_TIER_2)}
                 >
                   CONTACT US
                 </Link>
@@ -388,7 +388,7 @@ export function LandingPage() {
                 <Link
                   to="/contact"
                   className="underlined appears"
-                  onClick={() => triggerAnalyticsEvent(AnalyticsEvent.CLICK_PRICE_CTA, { tier: "3" })}
+                  onClick={() => triggerAnalyticsEvent(AnalyticsEvent.CLICK_PRICE_CTA_TIER_3)}
                 >
                   CONTACT US
                 </Link>
