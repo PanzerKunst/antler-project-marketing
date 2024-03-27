@@ -19,7 +19,7 @@ export function Banner({ children }: Props) {
 
   return (
     <FadeIn className="banner">
-      <div className="image-placeholder"/>
+      <div className="placeholder"/>
       <div className="children">
         {children}
       </div>
