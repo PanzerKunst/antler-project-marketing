@@ -109,7 +109,8 @@ export function AppHeader() {
                 <ScrollToHeaderButton label="Pricing" scrollToCssSelector="#pricing"/>
               </>
             )}
-            <button className="underlined appears" onClick={() => { navigate("/contact") }}>Contact</button>
+            <button className="underlined appears" onClick={() => navigate("/contact")}>Contact</button>
+            <button className="underlined appears" onClick={() => navigate("/survey")}>Survey</button>
           </nav>
         )}
       </header>
@@ -137,6 +138,12 @@ export function AppHeader() {
             setIsMenuOpen(false)
           }}>
             <span>Contact</span>
+          </li>
+          <li role="link" onClick={() => {
+            navigate("/survey")
+            setIsMenuOpen(false)
+          }}>
+            <span>Survey</span>
           </li>
         </Menu>
         /* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-to-interactive-role */

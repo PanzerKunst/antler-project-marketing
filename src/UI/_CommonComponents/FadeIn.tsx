@@ -13,7 +13,7 @@ type Props = {
   className?: string;
 }
 
-export function FadeIn({ children, delay = defaultFadeInDelay, duration = s.animationDurationMd, className = "" }: Props) {
+export function FadeIn({ children, delay = defaultFadeInDelay, duration = s.animationDurationSm, className = "" }: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}

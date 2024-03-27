@@ -1,0 +1,17 @@
+@import "/src/UI/_CommonStyles/mixins";
+
+.page.simple.contact {
+  @include responsive-images(lg);
+
+  > main {
+    @include vw(lg) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5em;
+    }
+  }
+
+  > img.mobile {
+    margin-top: -$main-block-margin / 2;
+  }
+}

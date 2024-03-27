@@ -25,13 +25,16 @@ $color-red-700: rgb(180 35 24); // #B42318
 
 // Functional colors, to use in the rest of the app
 $color-app-bg: $color-white;
+$color-app-bg-brand-gradient-start: $color-brand-700;
+$color-app-bg-brand-gradient-end: $color-brand-600;
+$color-banner-text: $color-white;
 $color-border: $color-gray-200;
 $color-border-danger: color.adjust($color-red-600, $alpha: -0.5);;
 $color-btn-bg-danger: $color-red-600;
 $color-btn-bg-icon-only-dark-hover: color.adjust($color-black, $alpha: -0.95);
 $color-btn-bg-icon-only-light-hover: color.adjust($color-white, $alpha: -0.5);;
-$color-btn-bg-primary-gradient-start: $color-brand-600;
-$color-btn-bg-primary-gradient-end: $color-brand-600;
+$color-btn-bg-brand-gradient-start: $color-brand-600;
+$color-btn-bg-brand-gradient-end: $color-brand-600;
 $color-btn-border: $color-brand-600;
 $color-btn-text: $color-white;
 $color-btn-text-pre-filled: $color-brand-600;

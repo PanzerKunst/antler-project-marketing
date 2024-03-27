@@ -23,6 +23,9 @@ export function AppFooter() {
               <li>
                 <Link to="/contact" className="underlined appears">Contact</Link>
               </li>
+              <li>
+                <Link to="/survey" className="underlined appears">Survey</Link>
+              </li>
             </ul>
           </nav>
 

@@ -57,6 +57,7 @@
 
         @include vw(md) {
           flex-direction: row;
+          align-items: flex-end;
         }
 
         > nav {
@@ -70,7 +71,7 @@
 
             // stylelint-disable-next-line max-nesting-depth
             @include vw(md) {
-              align-items: flex-end;
+              flex-direction: row;
             }
           }
         }

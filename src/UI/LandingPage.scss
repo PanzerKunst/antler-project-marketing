@@ -1,25 +1,14 @@
 @import "/src/UI/_CommonStyles/mixins";
 
+.page.landing > .banner + main {
+  margin-top: 11em;
+}
+
 .page.landing > main {
-  margin-block: 0;
+  @include responsive-images(lg);
+  margin-bottom: 0;
 
   $side-padding-text-block: 8vw;
-
-  img {
-    &.desktop {
-      display: none;
-    }
-
-    @include vw(lg) {
-      &.mobile {
-        display: none;
-      }
-
-      &.desktop {
-        display: block;
-      }
-    }
-  }
 
   .text-block-and-img {
     display: flex;
@@ -48,7 +37,7 @@
   > section {
     padding-block: 5em;
 
-    padding-inline: $min-content-side-margin;
+    padding-inline: $min-content-inline-margin;
     @include vw(lg) {
       padding-inline: 0;
     }
@@ -85,24 +74,26 @@
     }
 
     &#hero {
-      padding-top: 8em;
+      padding-block: 0;
 
       > div {
-        display: flex;
-        flex-direction: column;
+        &:not(.banner) {
+          display: flex;
+          flex-direction: column;
 
-        text-align: center;
+          text-align: center;
 
-        h1 {
-          margin-bottom: 0.5em;
-        }
+          h1 {
+            margin-bottom: 0.5em;
+          }
 
-        p {
-          margin-bottom: 1em;
-        }
+          p {
+            margin-bottom: 1em;
+          }
 
-        .subscribe-to-mailing-list {
-          margin-block: 1.5em;
+          .subscribe-to-mailing-list {
+            margin-block: 1.5em;
+          }
         }
       }
     }
@@ -252,16 +243,28 @@
       flex-direction: column;
       align-items: center;
 
-      > span {
-        color: $color-heading;
-        font-size: $font-size-xl;
-        font-weight: 600;
-
+      > h3 {
         margin-top: 35px;
       }
 
-      > h3 {
+      > div {
+        display: flex;
+        align-items: baseline;
+        gap: 0.5em;
+
         margin-top: 20px;
+
+        > span {
+          &:first-child {
+            color: $color-heading;
+            font-size: $font-size-xl;
+            font-weight: 600;
+          }
+
+          &:not(:first-child) {
+            font-size: $font-size-sm;
+          }
+        }
       }
 
       > ul {

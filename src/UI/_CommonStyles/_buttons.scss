@@ -2,8 +2,6 @@
 @import "./numbers";
 @import "./mixins";
 
-$min-button-size: 40px;
-
 @mixin button-reset {
   &:not([disabled]) {
     cursor: pointer;
@@ -30,7 +28,7 @@ a.button:not([role="tab"]) {
 
 button.button:not(.icon-only),
 a.button:not(.icon-only) {
-  @include to-right-red-gradient;
+  @include to-right-brand-gradient;
   background-size: 100% 100%;
   background-position: left center;
   background-repeat: no-repeat;
@@ -156,7 +154,6 @@ a.button {
 
 button.underlined {
   @include button-reset;
-  color: $color-link;
   font-size: $font-size-xs;
   @include underlined;
 }

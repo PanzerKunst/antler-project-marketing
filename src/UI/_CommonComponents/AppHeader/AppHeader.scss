@@ -67,11 +67,11 @@
     }
 
     &.mobile {
-      padding-inline: $min-content-side-margin;
+      padding-inline: $min-content-inline-margin;
     }
 
     &.menu-open {
-      padding-right: calc($min-content-side-margin + var(--scrollbar-width));
+      padding-right: calc($min-content-inline-margin + var(--scrollbar-width));
     }
   }
 

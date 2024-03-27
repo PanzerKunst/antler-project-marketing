@@ -6,7 +6,9 @@ $vw-lg: 960px;
 $vw-xl: 1280px;
 $vw-xxl: 1600px;
 
-$min-content-side-margin: 16px;
+$min-content-inline-margin: 16px;
+$main-block-margin: 8em;
+$min-button-size: 40px;
 
 $list-padding-left: 28px;
 
@@ -19,8 +21,9 @@ $animation-duration-sm: 0.3;
 $animation-duration-md: 0.7;
 
 $z-index-joy-input-focused-border: 1;
-$z-index-header: $z-index-joy-input-focused-border + 1;
-$z-index-tooltip: $z-index-header + 1;
+$z-index-banner: $z-index-joy-input-focused-border + 1;
+$z-index-header: $z-index-banner + 1;
+$z-index-tooltip: $z-index-banner + 1;
 $z-index-select-list: $z-index-tooltip + 1;
 $z-index-menu-backdrop: $z-index-select-list + 1;
 $z-index-menu: $z-index-menu-backdrop + 1;

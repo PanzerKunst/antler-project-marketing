@@ -16,6 +16,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link } from "react-router-dom"
 
+import { Banner } from "./_CommonComponents/Banner.tsx"
 import { FadeIn } from "./_CommonComponents/FadeIn.tsx"
 import { IconWithDualBgColor } from "./_CommonComponents/IconWithDualBgColor.tsx"
 import { SubscribeToMailingListForm } from "./_CommonComponents/SubscribeToMailingListForm.tsx"
@@ -27,6 +28,15 @@ import "./LandingPage.scss"
 export function LandingPage() {
   return (
     <div className="page landing">
+      <Banner>
+        <span>Make an impact by filling in <Link
+          to="/survey"
+          className="underlined disappears negative"
+          onClick={() => triggerAnalyticsEvent(AnalyticsEvent.CLICK_PRICE_CTA_TIER_3)}
+        >
+          our survey
+        </Link></span>
+      </Banner>
       <main>
         <section id="hero" className="text-block-and-img">
           <div>
@@ -44,8 +54,8 @@ export function LandingPage() {
               <SubscribeToMailingListForm/>
             </FadeIn>
           </div>
-          <img src="/images/landing/home-mobile.png" alt="App preview" className="mobile"/>
-          <img src="/images/landing/home-desktop.png" alt="App preview" className="desktop"/>
+          <img src="/images/landing/home-mobile.png" alt="GRC app" className="mobile"/>
+          <img src="/images/landing/home-desktop.png" alt="GRC app" className="desktop"/>
         </section>
 
         <section id="why">
@@ -82,7 +92,7 @@ export function LandingPage() {
                   <FontAwesomeIcon icon={faSliders}/>
                 </IconWithDualBgColor>
                 <h3>Reduce complexity</h3>
-                <p>Each system has duplicated functionality that works differently and requires understanding of new terms and workflows.</p>
+                <p>Siloed systems have duplicated functionality that work differently and requires understanding of new terms and workflows.</p>
               </li>
               <li>
                 <IconWithDualBgColor>
@@ -126,16 +136,16 @@ export function LandingPage() {
                   </li>
                 </ul>
               </div>
-              <img src="/images/landing/risk-mobile.png" alt="App preview" className="mobile"/>
-              <img src="/images/landing/risk-desktop.png" alt="App preview" className="desktop"/>
+              <img src="/images/landing/risk-mobile.png" alt="GRC Risk module" className="mobile"/>
+              <img src="/images/landing/risk-desktop.png" alt="GRC Risk module" className="desktop"/>
             </li>
             <li>
               <div>
                 <IconWithDualBgColor>
                   <FontAwesomeIcon icon={faFileSignature}/>
                 </IconWithDualBgColor>
-                <h3>Contract Manager</h3>
-                <p>Keep your documents, key data, legal entities in one place.</p>
+                <h3>Vendor Manager</h3>
+                <p>Keep your vendor documents, key data, legal entities in one place.</p>
                 <ul className="styleless">
                   <li>
                     <FontAwesomeIcon icon={faCircleCheck}/>
@@ -151,8 +161,8 @@ export function LandingPage() {
                   </li>
                 </ul>
               </div>
-              <img src="/images/landing/contract-mobile.png" alt="App preview" className="mobile"/>
-              <img src="/images/landing/contract-desktop.png" alt="App preview" className="desktop"/>
+              <img src="/images/landing/vendor-mobile.png" alt="GRC Vendor module" className="mobile"/>
+              <img src="/images/landing/vendor-desktop.png" alt="GRC Vendor module" className="desktop"/>
             </li>
             <li>
               <div>
@@ -176,8 +186,8 @@ export function LandingPage() {
                   </li>
                 </ul>
               </div>
-              <img src="/images/landing/policy-mobile.png" alt="App preview" className="mobile"/>
-              <img src="/images/landing/policy-desktop.png" alt="App preview" className="desktop"/>
+              <img src="/images/landing/policy-mobile.png" alt="GRC Policy module" className="mobile"/>
+              <img src="/images/landing/policy-desktop.png" alt="GRC Policy module" className="desktop"/>
             </li>
           </ul>
         </section>
@@ -236,14 +246,17 @@ export function LandingPage() {
           <ul className="styleless">
             <li>
               <div className="pricing-data">
-                <span>$499/mth</span>
                 <h3>Growth</h3>
+                <div>
+                  <span>999 €</span>
+                  <span>/ month</span>
+                </div>
                 <ul className="styleless">
                   <li>
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span>All modules: Risks, Contracts, Compliance</span>
+                    <span>All modules: Risks, Vendors, Compliance</span>
                   </li>
                   <li>
                     <div className="icon-with-bg-color">
@@ -267,13 +280,13 @@ export function LandingPage() {
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span>Best effort email support</span>
+                    <span>Up to <strong>50</strong> individual users</span>
                   </li>
                   <li>
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span>Up to 50 individual users</span>
+                    <span>Best effort email support</span>
                   </li>
                 </ul>
               </div>
@@ -290,14 +303,17 @@ export function LandingPage() {
             </li>
             <li>
               <div className="pricing-data">
-                <span>$1 499/mth</span>
                 <h3>Business</h3>
+                <div>
+                  <span>1 999 €</span>
+                  <span>/ month</span>
+                </div>
                 <ul className="styleless">
                   <li>
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span>All modules: Risks, Contracts, Compliance</span>
+                    <span>All modules: Risks, Vendors, Compliance</span>
                   </li>
                   <li>
                     <div className="icon-with-bg-color">
@@ -321,13 +337,13 @@ export function LandingPage() {
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span>Priority email support</span>
+                    <span>Up to <strong>100</strong> individual users</span>
                   </li>
                   <li>
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span>Up to 100 individual users</span>
+                    <span>Priority email support</span>
                   </li>
                 </ul>
               </div>
@@ -343,14 +359,14 @@ export function LandingPage() {
             </li>
             <li>
               <div className="pricing-data">
-                <span>Custom</span>
                 <h3>Enterprise</h3>
+                <div><span>Custom</span></div>
                 <ul className="styleless">
                   <li>
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span>All modules: Risks, Contracts, Compliance</span>
+                    <span>All modules: Risks, Vendors, Compliance</span>
                   </li>
                   <li>
                     <div className="icon-with-bg-color">
@@ -368,7 +384,13 @@ export function LandingPage() {
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span><strong>10 year</strong> audit history of all changes</span>
+                    <span><strong>Unlimited</strong> audit history of all changes</span>
+                  </li>
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span><strong>Unlimited</strong> individual users</span>
                   </li>
                   <li>
                     <div className="icon-with-bg-color">
@@ -380,7 +402,7 @@ export function LandingPage() {
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span>Unlimited individual users</span>
+                    <span>Self-hosting option</span>
                   </li>
                 </ul>
               </div>

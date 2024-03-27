@@ -1,7 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 
-import { ContactPage } from "./ContactPage.tsx"
 import { LandingPage } from "./LandingPage.tsx"
+import { ContactPage } from "./SimplePages/ContactPage.tsx"
+import { SurveyPage } from "./SimplePages/SurveyPage.tsx"
 import { Layout } from "./_CommonComponents/Layout.tsx"
 import { AppContextProvider } from "../AppContext.tsx"
 
@@ -11,7 +12,8 @@ const router = createBrowserRouter([
   {
     path: "/", element: <Layout/>, children: [
       { path: "/", element: <LandingPage/> },
-      { path: "contact", element: <ContactPage/> }
+      { path: "contact", element: <ContactPage/> },
+      { path: "survey", element: <SurveyPage/> }
     ]
   }
 ])
