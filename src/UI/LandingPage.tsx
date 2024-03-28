@@ -238,8 +238,7 @@ export function LandingPage() {
         <section id="pricing">
           <header>
             <span>Pricing</span>
-            <h2>Simple, transparent pricing</h2>
-            <p>The onboarding cost? Zero.</p>
+            <h2>Enterprise software pricing can be simple</h2>
             {/* <h2>Sign up for 30-day free trial. No credit card required.</h2> */}
           </header>
 

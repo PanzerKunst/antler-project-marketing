@@ -21,6 +21,12 @@
   }
 
   &.simple {
+    > main.container:not(.two-col) {
+      @include vw(xl) {
+        width: $vw-lg;
+      }
+    }
+
     h1 {
       margin-bottom: 1em;
     }
