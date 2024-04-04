@@ -255,7 +255,7 @@ export function LandingPage() {
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span>All modules: Risks, Vendors, Compliance</span>
+                    <span>All modules: Risks, Vendors, Policies</span>
                   </li>
                   <li>
                     <div className="icon-with-bg-color">
@@ -312,7 +312,7 @@ export function LandingPage() {
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span>All modules: Risks, Vendors, Compliance</span>
+                    <span>All modules: Risks, Vendors, Policies</span>
                   </li>
                   <li>
                     <div className="icon-with-bg-color">
@@ -365,7 +365,7 @@ export function LandingPage() {
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span>All modules: Risks, Vendors, Compliance</span>
+                    <span>All modules: Risks, Vendors, Policies</span>
                   </li>
                   <li>
                     <div className="icon-with-bg-color">
