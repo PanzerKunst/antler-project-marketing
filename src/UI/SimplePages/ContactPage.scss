@@ -1,3 +1,4 @@
+@use "sass:math";
 @import "/src/UI/_CommonStyles/mixins";
 
 .page.simple.contact {
@@ -12,6 +13,6 @@
   }
 
   > img.mobile {
-    margin-top: -$main-block-margin / 2;
+    margin-top: math.div(-$main-block-margin, 2);
   }
 }
