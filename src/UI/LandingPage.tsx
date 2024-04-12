@@ -54,8 +54,8 @@ export function LandingPage() {
               <SubscribeToMailingListForm/>
             </FadeIn>
           </div>
-          <img src="/images/landing/home-mobile.png" alt="GRC app" className="mobile"/>
-          <img src="/images/landing/home-desktop.png" alt="GRC app" className="desktop"/>
+          <img src="https://metis-grc.b-cdn.net/images/landing/home-mobile.png" alt="GRC app" className="mobile"/>
+          <img src="https://metis-grc.b-cdn.net/images/landing/home-desktop.png" alt="GRC app" className="desktop"/>
         </section>
 
         <section id="why">
@@ -136,8 +136,8 @@ export function LandingPage() {
                   </li>
                 </ul>
               </div>
-              <img src="/images/landing/risk-mobile.png" alt="GRC Risk module" className="mobile"/>
-              <img src="/images/landing/risk-desktop.png" alt="GRC Risk module" className="desktop"/>
+              <img src="https://metis-grc.b-cdn.net/images/landing/risk-mobile.png" alt="GRC Risk module" className="mobile"/>
+              <img src="https://metis-grc.b-cdn.net/images/landing/risk-desktop.png" alt="GRC Risk module" className="desktop"/>
             </li>
             <li>
               <div>
@@ -161,8 +161,8 @@ export function LandingPage() {
                   </li>
                 </ul>
               </div>
-              <img src="/images/landing/vendor-mobile.png" alt="GRC Vendor module" className="mobile"/>
-              <img src="/images/landing/vendor-desktop.png" alt="GRC Vendor module" className="desktop"/>
+              <img src="https://metis-grc.b-cdn.net/images/landing/vendor-mobile.png" alt="GRC Vendor module" className="mobile"/>
+              <img src="https://metis-grc.b-cdn.net/images/landing/vendor-desktop.png" alt="GRC Vendor module" className="desktop"/>
             </li>
             <li>
               <div>
