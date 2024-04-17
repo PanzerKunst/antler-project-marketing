@@ -144,7 +144,7 @@
         margin-bottom: 5em;
       }
 
-      > div {
+      > div:first-child {
         display: flex;
         flex-direction: column;
         gap: 1em;
@@ -175,6 +175,31 @@
         }
       }
 
+      > div.video-preview {
+        position: relative;
+        cursor: pointer;
+
+        > .button.icon-only {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          > svg {
+            @include img-size(30%);
+            @include svg-shadow;
+          }
+        }
+      }
+
+      > div.video-player {
+        margin-block: 5.5%;
+
+        @include vw(lg) {
+          margin-block: 10.8%;
+        }
+      }
+
       @include vw(lg) {
         gap: 0;
         display: grid;
@@ -187,7 +212,7 @@
           }
         }
 
-        > div {
+        > div:first-child {
           padding-inline: $side-padding-text-block;
         }
       }

@@ -1,4 +1,4 @@
-import { faCircleCheck } from "@fortawesome/free-regular-svg-icons"
+import {faCircleCheck, faCirclePlay} from "@fortawesome/free-regular-svg-icons"
 import {
   faArrowRightArrowLeft,
   faArrowsToDot,
@@ -13,19 +13,27 @@ import {
   faSquareCheck,
   faTriangleExclamation
 } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { Link } from "react-router-dom"
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import {useState} from "react"
+import {Link} from "react-router-dom"
 
-import { Banner } from "./_CommonComponents/Banner.tsx"
-import { FadeIn } from "./_CommonComponents/FadeIn.tsx"
-import { IconWithDualBgColor } from "./_CommonComponents/IconWithDualBgColor.tsx"
-import { SubscribeToMailingListForm } from "./_CommonComponents/SubscribeToMailingListForm.tsx"
-import { AnalyticsEvent, triggerAnalyticsEvent } from "../Util/AnalyticsUtils.ts"
+import {Banner} from "./_CommonComponents/Banner.tsx"
+import {FadeIn} from "./_CommonComponents/FadeIn.tsx"
+import {IconWithDualBgColor} from "./_CommonComponents/IconWithDualBgColor.tsx"
+import {SubscribeToMailingListForm} from "./_CommonComponents/SubscribeToMailingListForm.tsx"
+import {VideoPlayer} from "./_CommonComponents/VideoPlayer.tsx"
+import {AnalyticsEvent, triggerAnalyticsEvent} from "../Util/AnalyticsUtils.ts"
 
 import s from "/src/UI/_CommonStyles/_exports.module.scss"
 import "./LandingPage.scss"
 
 export function LandingPage() {
+  const [playVideo, setPlayVideo] = useState(false)
+
+  const handlePlayVideo = () => {
+    setPlayVideo(true)
+  }
+
   return (
     <div className="page landing">
       <Banner>
@@ -54,8 +62,8 @@ export function LandingPage() {
               <SubscribeToMailingListForm/>
             </FadeIn>
           </div>
-          <img src="https://metis-grc.b-cdn.net/images/landing/home-mobile.png" alt="GRC app" className="mobile"/>
-          <img src="https://metis-grc.b-cdn.net/images/landing/home-desktop.png" alt="GRC app" className="desktop"/>
+          <img src="https://metis-grc.b-cdn.net/images/landing/hero-mobile.png" alt="GRC app" className="mobile"/>
+          <img src="https://metis-grc.b-cdn.net/images/landing/hero-desktop.png" alt="GRC app" className="desktop"/>
         </section>
 
         <section id="why">
@@ -136,8 +144,16 @@ export function LandingPage() {
                   </li>
                 </ul>
               </div>
-              <img src="https://metis-grc.b-cdn.net/images/landing/risk-mobile.png" alt="GRC Risk module" className="mobile"/>
-              <img src="https://metis-grc.b-cdn.net/images/landing/risk-desktop.png" alt="GRC Risk module" className="desktop"/>
+              {!playVideo ? (
+                // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/interactive-supports-focus
+                <div className="video-preview" role="button" onClick={handlePlayVideo}>
+                  <img src="https://metis-grc.b-cdn.net/images/landing/risk-mobile.png" alt="GRC Risk module" className="mobile"/>
+                  <img src="https://metis-grc.b-cdn.net/images/landing/risk-desktop.png" alt="GRC Risk module" className="desktop"/>
+                  <button className="button icon-only light"><FontAwesomeIcon icon={faCirclePlay} /></button>
+                </div>
+              ) : (
+                <VideoPlayer url="/video/Risk Manager.mp4" autoPlay/>
+              )}
             </li>
             <li>
               <div>
@@ -225,8 +241,8 @@ export function LandingPage() {
                 </div>
                 <div>
                   <h3>Connect Code:metis to your IT infrastructure</h3>
-                  <p>Connect with your existing applications via our REST API. For example: feed your incidents or contracts from existing
-                    solutions for an overview in Code:metis.</p>
+                  <p>Connect with your existing applications via our REST API. For example: feed your incidents or contracts from existing solutions
+                    for an overview in Code:metis.</p>
                 </div>
               </li>
             </ul>
@@ -245,9 +261,9 @@ export function LandingPage() {
           <ul className="styleless">
             <li>
               <div className="pricing-data">
-                <h3>Growth</h3>
+                <h3>Starter</h3>
                 <div>
-                  <span>999 €</span>
+                  <span>399 €</span>
                   <span>/ month</span>
                 </div>
                 <ul className="styleless">
@@ -255,37 +271,31 @@ export function LandingPage() {
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span>All modules: Risks, Vendors, Policies</span>
+                    <span>1 module between: Risks, Vendors, Policies</span>
                   </li>
                   <li>
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span>Legal and Management database</span>
+                    <span>Full integration with One Drive or Google Drive</span>
                   </li>
                   <li>
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span><strong>Links</strong> to One Drive or Google Drive</span>
+                    <span>Unlimited audit history of all changes</span>
                   </li>
                   <li>
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span><strong>1 year</strong> audit history of all changes</span>
+                    <span>Unlimited individual users</span>
                   </li>
                   <li>
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span>Up to <strong>50</strong> individual users</span>
-                  </li>
-                  <li>
-                    <div className="icon-with-bg-color">
-                      <FontAwesomeIcon icon={faCheck}/>
-                    </div>
-                    <span>Best effort email support</span>
+                    <span>Priority email support</span>
                   </li>
                 </ul>
               </div>
@@ -304,10 +314,16 @@ export function LandingPage() {
               <div className="pricing-data">
                 <h3>Business</h3>
                 <div>
-                  <span>1 999 €</span>
+                  <span>999 €</span>
                   <span>/ month</span>
                 </div>
                 <ul className="styleless">
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span>Everything from the Starter tier</span>
+                  </li>
                   <li>
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
@@ -324,25 +340,7 @@ export function LandingPage() {
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span><strong>Full integration</strong> with One Drive or Google Drive</span>
-                  </li>
-                  <li>
-                    <div className="icon-with-bg-color">
-                      <FontAwesomeIcon icon={faCheck}/>
-                    </div>
-                    <span><strong>5 year</strong> audit history of all changes</span>
-                  </li>
-                  <li>
-                    <div className="icon-with-bg-color">
-                      <FontAwesomeIcon icon={faCheck}/>
-                    </div>
-                    <span>Up to <strong>100</strong> individual users</span>
-                  </li>
-                  <li>
-                    <div className="icon-with-bg-color">
-                      <FontAwesomeIcon icon={faCheck}/>
-                    </div>
-                    <span>Priority email support</span>
+                    <span>Priority email and phone support</span>
                   </li>
                 </ul>
               </div>
@@ -365,37 +363,13 @@ export function LandingPage() {
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span>All modules: Risks, Vendors, Policies</span>
+                    <span>Everything from the Business tier</span>
                   </li>
                   <li>
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span>Legal and Management database</span>
-                  </li>
-                  <li>
-                    <div className="icon-with-bg-color">
-                      <FontAwesomeIcon icon={faCheck}/>
-                    </div>
-                    <span><strong>Full integration</strong> with One Drive or Google Drive</span>
-                  </li>
-                  <li>
-                    <div className="icon-with-bg-color">
-                      <FontAwesomeIcon icon={faCheck}/>
-                    </div>
-                    <span><strong>Unlimited</strong> audit history of all changes</span>
-                  </li>
-                  <li>
-                    <div className="icon-with-bg-color">
-                      <FontAwesomeIcon icon={faCheck}/>
-                    </div>
-                    <span><strong>Unlimited</strong> individual users</span>
-                  </li>
-                  <li>
-                    <div className="icon-with-bg-color">
-                      <FontAwesomeIcon icon={faCheck}/>
-                    </div>
-                    <span>Priority email and phone support</span>
+                    <span>Extensive onboarding support</span>
                   </li>
                   <li>
                     <div className="icon-with-bg-color">
