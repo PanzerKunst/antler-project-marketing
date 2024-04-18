@@ -152,7 +152,7 @@ export function LandingPage() {
                   <button className="button icon-only light"><FontAwesomeIcon icon={faCirclePlay} /></button>
                 </div>
               ) : (
-                <VideoPlayer url="https://youtu.be/nm2vW3hIxdY" autoPlay/>
+                <VideoPlayer url="https://youtu.be/6oXm6jA5h_M" autoPlay/>
               )}
             </li>
             <li>
