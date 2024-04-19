@@ -103,7 +103,7 @@ export function AppHeader() {
         style={{top: 0}}
       >
         <Link to="/">
-          <img src="https://metis-grc.b-cdn.net/images/vite.svg" alt="logo"/>
+          <img src="https://grace-grc.b-cdn.net/images/vite.svg" alt="logo"/>
           <span>GRACE</span>
         </Link>
 
