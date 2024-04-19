@@ -21,10 +21,13 @@ export function AppFooter() {
           <nav>
             <ul className="styleless">
               <li>
-                <Link to="/contact" className="underlined appears">Contact</Link>
+                <Link to="/consulting" className="underlined appears">Consulting</Link>
               </li>
               <li>
                 <Link to="/survey" className="underlined appears">Survey</Link>
+              </li>
+              <li>
+                <Link to="/contact" className="underlined appears">Contact</Link>
               </li>
             </ul>
           </nav>

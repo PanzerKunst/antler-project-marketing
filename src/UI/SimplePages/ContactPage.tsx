@@ -1,4 +1,4 @@
-import "./ContactPage.scss"
+import "./SimplePage.scss"
 
 export function ContactPage() {
   return (

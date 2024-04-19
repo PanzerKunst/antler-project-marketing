@@ -119,6 +119,7 @@ export function AppHeader() {
             <ScrollToHeaderButton label="Policies" scrollToCssSelector="#policies" beforeScrolling={handleScrollToHeaderBeforeScrolling}/>
             <ScrollToHeaderButton label="Vendors" scrollToCssSelector="#vendors" beforeScrolling={handleScrollToHeaderBeforeScrolling}/>
             <ScrollToHeaderButton label="Pricing" scrollToCssSelector="#pricing" beforeScrolling={handleScrollToHeaderBeforeScrolling}/>
+            <button className="underlined appears" onClick={() => navigate("/consulting")}>Consulting</button>
             <button className="underlined appears" onClick={() => navigate("/contact")}>Contact</button>
           </nav>
         )}
@@ -137,6 +138,12 @@ export function AppHeader() {
           </li>
           <li role="button" onClick={() => handleMenuItemClick("#pricing")}>
             <span>Pricing</span>
+          </li>
+          <li role="link" onClick={() => {
+            navigate("/consulting")
+            setIsMenuOpen(false)
+          }}>
+            <span>Consulting</span>
           </li>
           <li role="link" onClick={() => {
             navigate("/contact")

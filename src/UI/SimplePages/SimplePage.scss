@@ -1,13 +1,15 @@
 @use "sass:math";
 @import "/src/UI/_CommonStyles/mixins";
 
-.page.simple.contact {
+.page.simple.contact,
+.page.simple.consulting {
   @include responsive-images(lg);
 
   > main {
     @include vw(lg) {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      align-items: center;
       gap: 5em;
     }
   }
