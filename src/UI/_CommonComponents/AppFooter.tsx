@@ -30,7 +30,7 @@ export function AppFooter() {
           </nav>
 
           <div>
-            <span>&copy; {dayjs().year()} Code:metis</span>
+            <span>&copy; {dayjs().year()} GRACE</span>
           </div>
         </div>
       </div>

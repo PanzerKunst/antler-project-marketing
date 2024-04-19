@@ -53,6 +53,11 @@ export function getScrollbarWidth() {
   return scrollbarWidth
 }
 
+export function scrollToElement(cssSelector: string) {
+  const scrollToElement = document.querySelector(cssSelector)
+  scrollIntoView(scrollToElement)
+}
+
 export function scrollIntoView(element: Element | null, delaySeconds: number | undefined = 0): void {
   if (!element || isInViewport(element)) {
     return

@@ -92,8 +92,8 @@
 @mixin svg-shadow {
   $offset-x: 0;
   $offset-y: 0;
-  $blur-radius: 0.08em;
-  filter: drop-shadow($offset-x $offset-y $blur-radius $color-drop-shadow-8pc);
+  $blur-radius: 0.125em;
+  filter: drop-shadow($offset-x $offset-y $blur-radius $color-drop-shadow-15pc);
 }
 
 @mixin to-right-brand-gradient {

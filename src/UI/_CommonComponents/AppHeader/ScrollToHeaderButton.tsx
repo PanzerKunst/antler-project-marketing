@@ -1,17 +1,22 @@
-import { scrollIntoView } from "../../../Util/BrowserUtils.ts"
+import {scrollToElement} from "../../../Util/BrowserUtils.ts"
 
 type Props = {
   label: string;
   scrollToCssSelector: string;
-  onClick?: () => void;
+  beforeScrolling?: () => void;
 }
 
-export function ScrollToHeaderButton({ label, scrollToCssSelector, onClick = () => {} }: Props) {
+export function ScrollToHeaderButton({ label, scrollToCssSelector, beforeScrolling }: Props) {
   const handleClick = () => {
-    onClick()
+    if (!beforeScrolling) {
+      scrollToElement(scrollToCssSelector)
+    } else {
+      beforeScrolling()
 
-    const scrollToElement = document.querySelector(scrollToCssSelector)
-    scrollIntoView(scrollToElement)
+      setTimeout(() => {
+        scrollToElement(scrollToCssSelector)
+      }, 100)
+    }
   }
 
   return (

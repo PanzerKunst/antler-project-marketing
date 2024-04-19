@@ -1,16 +1,16 @@
 import {faCircleCheck, faCirclePlay} from "@fortawesome/free-regular-svg-icons"
 import {
   faArrowRightArrowLeft,
-  faArrowsToDot,
+  faBell,
   faCheck,
-  faEye,
+  faCircleNodes,
+  faClockRotateLeft,
   faFileSignature,
-  faMaximize,
-  faPeopleGroup,
+  faFileWord,
   faScaleBalanced,
   faSitemap,
-  faSliders,
   faSquareCheck,
+  faStamp,
   faTriangleExclamation
 } from "@fortawesome/free-solid-svg-icons"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
@@ -28,10 +28,15 @@ import s from "/src/UI/_CommonStyles/_exports.module.scss"
 import "./LandingPage.scss"
 
 export function LandingPage() {
-  const [playVideo, setPlayVideo] = useState(false)
+  const [playRiskModuleVideo, setPlayRiskModuleVideo] = useState(false)
+  const [playPolicyModuleVideo, setPlayPolicyModuleVideo] = useState(false)
 
-  const handlePlayVideo = () => {
-    setPlayVideo(true)
+  const handlePlayRiskModuleVideo = () => {
+    setPlayRiskModuleVideo(true)
+  }
+
+  const handlePlayPolicyModuleVideo = () => {
+    setPlayPolicyModuleVideo(true)
   }
 
   return (
@@ -53,9 +58,10 @@ export function LandingPage() {
             </FadeIn>
 
             <FadeIn delay={0.4} duration={s.animationDurationMd}>
-              <p>Operating in a regulated or controlled environment?</p>
-              <p>We have grown up supporting companies just like yours. We're taking all this experience and designing a product for you.</p>
-              <p>Battle-tested for finance, healthcare and insurance.</p>
+              <p>Are you operating in a regulated or controlled environment?</p>
+              <p>We have grown up supporting companies just like yours. We're taking all this experience and designing bite sized products for
+                you.</p>
+              <p>Tested and future-proof for all listed and regulated companies.</p>
             </FadeIn>
 
             <FadeIn delay={0.7} duration={s.animationDurationMd}>
@@ -66,188 +72,146 @@ export function LandingPage() {
           <img src="https://metis-grc.b-cdn.net/images/landing/hero-desktop.png" alt="GRC app" className="desktop"/>
         </section>
 
-        <section id="why">
+        <section id="risks" className="product-module">
+          <div>
+            <IconWithDualBgColor>
+              <FontAwesomeIcon icon={faTriangleExclamation}/>
+            </IconWithDualBgColor>
+            <h3>Risk Manager</h3>
+            <p>Financial, Operational and Strategic risks - all catered for under one platform.</p>
+            <ul className="styleless">
+              <li>
+                <FontAwesomeIcon icon={faCircleCheck}/>
+                <span>Support for multi-level and jurisdiction organizations</span>
+              </li>
+              <li>
+                <FontAwesomeIcon icon={faCircleCheck}/>
+                <span>Risk library and risk instances fully customizable</span>
+              </li>
+              <li>
+                <FontAwesomeIcon icon={faCircleCheck}/>
+                <span>Audited review, allocation and history of risks</span>
+              </li>
+            </ul>
+          </div>
+          {!playRiskModuleVideo ? (
+            // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/interactive-supports-focus
+            <div className="video-preview" role="button" onClick={handlePlayRiskModuleVideo}>
+              <img src="https://metis-grc.b-cdn.net/images/landing/risk-mobile.png" alt="GRC Risk module" className="mobile"/>
+              <img src="https://metis-grc.b-cdn.net/images/landing/risk-desktop.png" alt="GRC Risk module" className="desktop"/>
+              <button className="button icon-only light"><FontAwesomeIcon icon={faCirclePlay}/></button>
+            </div>
+          ) : (
+            <VideoPlayer url="https://youtu.be/6oXm6jA5h_M" autoPlay/>
+          )}
+        </section>
+
+        <section id="policies" className="product-module">
+          <div>
+            <IconWithDualBgColor>
+              <FontAwesomeIcon icon={faSquareCheck}/>
+            </IconWithDualBgColor>
+            <h3>Policy Manager</h3>
+            <p>Take the pain out of Policies, Instructions, Guidelines, and Handbooks.</p>
+            <ul className="styleless">
+              <li>
+                <FontAwesomeIcon icon={faCircleCheck}/>
+                <span>Tag policies to those teams covered by the policy</span>
+              </li>
+              <li>
+                <FontAwesomeIcon icon={faCircleCheck}/>
+                <span>Review, approve and publish workflow</span>
+              </li>
+              <li>
+                <FontAwesomeIcon icon={faCircleCheck}/>
+                <span>Auditable history of all changes and archived versions stored on your company’s own server</span>
+              </li>
+            </ul>
+          </div>
+          {!playPolicyModuleVideo ? (
+            // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/interactive-supports-focus
+            <div className="video-preview" role="button" onClick={handlePlayPolicyModuleVideo}>
+              <img src="/images/landing/policy-mobile.png" alt="GRC Policy module" className="mobile"/>
+              <img src="/images/landing/policy-desktop.png" alt="GRC Policy module" className="desktop"/>
+              <button className="button icon-only light"><FontAwesomeIcon icon={faCirclePlay}/></button>
+            </div>
+          ) : (
+            <VideoPlayer url="https://youtu.be/3u88GOCW-68" autoPlay/>
+          )}
+        </section>
+
+        <section id="vendors" className="product-module">
+          <div>
+            <IconWithDualBgColor>
+              <FontAwesomeIcon icon={faFileSignature}/>
+            </IconWithDualBgColor>
+            <h3>Vendor Manager</h3>
+            <p>Keep your contracts, vendors, audits in one place.</p>
+            <ul className="styleless">
+              <li>
+                <FontAwesomeIcon icon={faCircleCheck}/>
+                <span>Simple periodic audits and follow up of vendors for EBA, DORA and other requirements</span>
+              </li>
+              <li>
+                <FontAwesomeIcon icon={faCircleCheck}/>
+                <span>Allow Legal, Sales, Procurement & Vendor Management to work on same platform and data</span>
+              </li>
+              <li>
+                <FontAwesomeIcon icon={faCircleCheck}/>
+                <span>Track agreements by type, counterparty and conditions</span>
+              </li>
+            </ul>
+          </div>
+          <img src="/images/landing/vendor-mobile.png" alt="GRC Vendor module" className="mobile"/>
+          <img src="/images/landing/vendor-desktop.png" alt="GRC Vendor module" className="desktop"/>
+        </section>
+
+        <section id="get-synergy">
           <div className="container">
             <header>
-              <span>Why?</span>
-              <h2>Get away from siloed systems</h2>
-              <p>Combine Legal, Risk, Compliance, Operations, IT & Procurement.</p>
+              <span>Get synergy</span>
+              <h2>Modules working perfectly together</h2>
+              <p>And the powerful common features they share.</p>
             </header>
             <ul className="styleless">
               <li>
                 <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faEye}/>
+                  <FontAwesomeIcon icon={faClockRotateLeft} />
                 </IconWithDualBgColor>
-                <h3>Full overview for the CEO and Board</h3>
-                <p>Siloed systems mean the CEO and Board need to request data from each department individually.</p>
+                <h3>Full auditable history</h3>
+                <p>Track changes and approvals. Store previous versions of all key documents. Maintain clear lines of responsibility in times of
+                  change.</p>
               </li>
               <li>
                 <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faArrowsToDot}/>
+                  <FontAwesomeIcon icon={faFileWord} />
                 </IconWithDualBgColor>
-                <h3>Golden source of truth</h3>
-                <p>Siloed systems mean that basic company data is not updated or available for everyone.</p>
+                <h3>Leverage existing documents</h3>
+                <p>Integration with OneDrive, Sharepoint, Teams and Google Drive. Protect key documents by storing in your existing folder
+                  structure.</p>
               </li>
               <li>
                 <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faMaximize}/>
+                  <FontAwesomeIcon icon={faBell} />
                 </IconWithDualBgColor>
-                <h3>Gain benefits of scale</h3>
-                <p>Multiple solutions require multiple implementations and procurement processes.</p>
+                <h3>Reminders</h3>
+                <p>Preset scheduled reminders, or simply nudge responsible people for updates when you need an update.</p>
               </li>
               <li>
                 <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faSliders}/>
+                  <FontAwesomeIcon icon={faCircleNodes} />
                 </IconWithDualBgColor>
-                <h3>Reduce complexity</h3>
-                <p>Siloed systems have duplicated functionality that work differently and requires understanding of new terms and workflows.</p>
+                <h3>Cross-reference objects</h3>
+                <p>Increase insight through connections between policies, risks, vendors, controls and processes.</p>
               </li>
               <li>
                 <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faPeopleGroup}/>
+                  <FontAwesomeIcon icon={faStamp} />
                 </IconWithDualBgColor>
-                <h3>Senior management works together</h3>
-                <p>In siloed solutions, each department solves its problems individually, making reporting and tracking basic tasks
-                  time-consuming.</p>
+                <h3>Certification-ready</h3>
+                <p>Basel framework, DORA and ISO compliance ensured, with excellent flexibility, future proofing the solutions.</p>
               </li>
             </ul>
-          </div>
-        </section>
-
-        <section id="product-modules">
-          <header>
-            <span>Code:metis</span>
-            <h2>A suite of modules working together</h2>
-            <p>And nimble enough for any department in you company.</p>
-          </header>
-
-          <ul className="styleless">
-            <li>
-              <div>
-                <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faTriangleExclamation}/>
-                </IconWithDualBgColor>
-                <h3>Risk Manager</h3>
-                <p>Financial, Operational and Strategic risks – all catered for under one platform.</p>
-                <ul className="styleless">
-                  <li>
-                    <FontAwesomeIcon icon={faCircleCheck}/>
-                    <span>Support for multi-level and jurisdiction organisations</span>
-                  </li>
-                  <li>
-                    <FontAwesomeIcon icon={faCircleCheck}/>
-                    <span>Risk library and risk instances fully customiseable</span>
-                  </li>
-                  <li>
-                    <FontAwesomeIcon icon={faCircleCheck}/>
-                    <span>Audited review, allocation and tracking of risks</span>
-                  </li>
-                </ul>
-              </div>
-              {!playVideo ? (
-                // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/interactive-supports-focus
-                <div className="video-preview" role="button" onClick={handlePlayVideo}>
-                  <img src="https://metis-grc.b-cdn.net/images/landing/risk-mobile.png" alt="GRC Risk module" className="mobile"/>
-                  <img src="https://metis-grc.b-cdn.net/images/landing/risk-desktop.png" alt="GRC Risk module" className="desktop"/>
-                  <button className="button icon-only light"><FontAwesomeIcon icon={faCirclePlay} /></button>
-                </div>
-              ) : (
-                <VideoPlayer url="https://youtu.be/6oXm6jA5h_M" autoPlay/>
-              )}
-            </li>
-            <li>
-              <div>
-                <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faFileSignature}/>
-                </IconWithDualBgColor>
-                <h3>Vendor Manager</h3>
-                <p>Keep your vendor documents, key data, legal entities in one place.</p>
-                <ul className="styleless">
-                  <li>
-                    <FontAwesomeIcon icon={faCircleCheck}/>
-                    <span>Simple periodic audits and follow up of vendors</span>
-                  </li>
-                  <li>
-                    <FontAwesomeIcon icon={faCircleCheck}/>
-                    <span>Resources for Legal, Sales, Procurement & Vendor Management</span>
-                  </li>
-                  <li>
-                    <FontAwesomeIcon icon={faCircleCheck}/>
-                    <span>Track agreements by type, counterparty and conditions</span>
-                  </li>
-                </ul>
-              </div>
-              <img src="https://metis-grc.b-cdn.net/images/landing/vendor-mobile.png" alt="GRC Vendor module" className="mobile"/>
-              <img src="https://metis-grc.b-cdn.net/images/landing/vendor-desktop.png" alt="GRC Vendor module" className="desktop"/>
-            </li>
-            <li>
-              <div>
-                <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faSquareCheck}/>
-                </IconWithDualBgColor>
-                <h3>Policy Manager</h3>
-                <p>Managing Policies, Instructions, Guidelines, Handbooks.</p>
-                <ul className="styleless">
-                  <li>
-                    <FontAwesomeIcon icon={faCircleCheck}/>
-                    <span>Hierarchy of Rules, Instructions, Policies</span>
-                  </li>
-                  <li>
-                    <FontAwesomeIcon icon={faCircleCheck}/>
-                    <span>Simple review, approve and publish workflow</span>
-                  </li>
-                  <li>
-                    <FontAwesomeIcon icon={faCircleCheck}/>
-                    <span>Auditable history of all changes</span>
-                  </li>
-                </ul>
-              </div>
-              <img src="/images/landing/policy-mobile.png" alt="GRC Policy module" className="mobile"/>
-              <img src="/images/landing/policy-desktop.png" alt="GRC Policy module" className="desktop"/>
-            </li>
-          </ul>
-        </section>
-
-        <section id="product-overview">
-          <header>
-            <span>Code:metis</span>
-            <h2>Your company's overview</h2>
-            <p>All Code:metis modules share a single source of truth for your company data.</p>
-          </header>
-
-          <div className="text-block-and-img">
-            <ul className="styleless">
-              <li>
-                <div className="icon-with-square-border">
-                  <FontAwesomeIcon icon={faScaleBalanced}/>
-                </div>
-                <div>
-                  <h3>Company legal structure</h3>
-                  <p>Track and map your ownership structure, jurisdictions, boards, officers.</p>
-                </div>
-              </li>
-              <li>
-                <div className="icon-with-square-border">
-                  <FontAwesomeIcon icon={faSitemap}/>
-                </div>
-                <div>
-                  <h3>Company management structure</h3>
-                  <p>Track and map your management structure, departments, divisions, units, managers.</p>
-                </div>
-              </li>
-              <li>
-                <div className="icon-with-square-border">
-                  <FontAwesomeIcon icon={faArrowRightArrowLeft}/>
-                </div>
-                <div>
-                  <h3>Connect Code:metis to your IT infrastructure</h3>
-                  <p>Connect with your existing applications via our REST API. For example: feed your incidents or contracts from existing solutions
-                    for an overview in Code:metis.</p>
-                </div>
-              </li>
-            </ul>
-            <img src="/images/landing/home-mobile.png" alt="App preview" className="mobile"/>
-            <img src="/images/landing/home-desktop.png" alt="App preview" className="desktop"/>
           </div>
         </section>
 
@@ -261,9 +225,9 @@ export function LandingPage() {
           <ul className="styleless">
             <li>
               <div className="pricing-data">
-                <h3>Starter</h3>
+                <h3>Policy module</h3>
                 <div>
-                  <span>399 €</span>
+                  <span>199 €</span>
                   <span>/ month</span>
                 </div>
                 <ul className="styleless">
@@ -271,31 +235,55 @@ export function LandingPage() {
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span>1 module between: Risks, Vendors, Policies</span>
+                    <span>Unlimited policies</span>
                   </li>
                   <li>
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span>Full integration with One Drive or Google Drive</span>
+                    <span>Track revisions and approvals</span>
                   </li>
                   <li>
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span>Unlimited audit history of all changes</span>
+                    <span>Publish to PDF</span>
                   </li>
                   <li>
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span>Unlimited individual users</span>
+                    <span>Reminders</span>
                   </li>
                   <li>
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span>Priority email support</span>
+                    <span>Tag owner groups</span>
+                  </li>
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span>Tag legal entities</span>
+                  </li>
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span>Full auditable history</span>
+                  </li>
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span>Cross-reference processes and controls</span>
+                  </li>
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span>Integration with OneDrive or Google Drive</span>
                   </li>
                 </ul>
               </div>
@@ -312,9 +300,9 @@ export function LandingPage() {
             </li>
             <li>
               <div className="pricing-data">
-                <h3>Business</h3>
+                <h3>Risk module</h3>
                 <div>
-                  <span>999 €</span>
+                  <span>399 €</span>
                   <span>/ month</span>
                 </div>
                 <ul className="styleless">
@@ -322,25 +310,49 @@ export function LandingPage() {
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span>Everything from the Starter tier</span>
+                    <span>Risk library</span>
                   </li>
                   <li>
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span>All modules: Risks, Vendors, Policies</span>
+                    <span>Risk taxonomy</span>
                   </li>
                   <li>
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span>Legal and Management database</span>
+                    <span>Configurable heatmaps</span>
                   </li>
                   <li>
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span>Priority email and phone support</span>
+                    <span>Support for multiple organization levels</span>
+                  </li>
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span>Tag processes and controls</span>
+                  </li>
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span>Board dashboard</span>
+                  </li>
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span>Full auditable history</span>
+                  </li>
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span>Basel framework compliant</span>
                   </li>
                 </ul>
               </div>
@@ -356,26 +368,53 @@ export function LandingPage() {
             </li>
             <li>
               <div className="pricing-data">
-                <h3>Enterprise</h3>
-                <div><span>Custom</span></div>
+                <h3>Vendor module</h3>
+                <div>
+                  <span>599 €</span>
+                  <span>/ month</span>
+                </div>
                 <ul className="styleless">
                   <li>
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span>Everything from the Business tier</span>
+                    <span>Contract database</span>
                   </li>
                   <li>
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span>Extensive onboarding support</span>
+                    <span>Vendor risk assessments</span>
                   </li>
                   <li>
                     <div className="icon-with-bg-color">
                       <FontAwesomeIcon icon={faCheck}/>
                     </div>
-                    <span>Self-hosting option</span>
+                    <span>Reminders</span>
+                  </li>
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span>Vendor upload of requested KPIs and audits</span>
+                  </li>
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span>Full auditable history</span>
+                  </li>
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span>Integration with OneDrive or Google Drive</span>
+                  </li>
+                  <li>
+                    <div className="icon-with-bg-color">
+                      <FontAwesomeIcon icon={faCheck}/>
+                    </div>
+                    <span>DORA/EBA Outsourcing compatible</span>
                   </li>
                 </ul>
               </div>
@@ -390,6 +429,49 @@ export function LandingPage() {
               </div>
             </li>
           </ul>
+        </section>
+
+        <section id="company-overview">
+          <header>
+            <span>One more thing...</span>
+            <h2>Company Overview</h2>
+            <p>All CRACE modules share a single source of truth for your company data.</p>
+          </header>
+
+          <div className="text-block-and-img">
+            <ul className="styleless">
+              <li>
+                <div className="icon-with-square-border">
+                  <FontAwesomeIcon icon={faScaleBalanced}/>
+                </div>
+                <div>
+                  <h3>Company legal structure</h3>
+                  <p>Track and map your ownership structure, jurisdictions, boards, and officers.</p>
+                </div>
+              </li>
+              <li>
+                <div className="icon-with-square-border">
+                  <FontAwesomeIcon icon={faSitemap}/>
+                </div>
+                <div>
+                  <h3>Company management structure</h3>
+                  <p>Track and map your management structure, departments, divisions, units, managers.</p>
+                </div>
+              </li>
+              <li>
+                <div className="icon-with-square-border">
+                  <FontAwesomeIcon icon={faArrowRightArrowLeft}/>
+                </div>
+                <div>
+                  <h3>Connect GRACE to your IT infrastructure</h3>
+                  <p>Connect with your existing applications via our REST API. For example: feed your incidents or contracts from existing solutions
+                    for an overview in GRACE.</p>
+                </div>
+              </li>
+            </ul>
+            <img src="/images/landing/home-mobile.png" alt="App preview" className="mobile"/>
+            <img src="/images/landing/home-desktop.png" alt="App preview" className="desktop"/>
+          </div>
         </section>
       </main>
     </div>

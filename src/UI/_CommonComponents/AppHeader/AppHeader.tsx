@@ -1,15 +1,15 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import classNames from "classnames"
-import { useEffect, useRef, useState } from "react"
-import { Link, useLocation, useNavigate } from "react-router-dom"
+import {useEffect, useRef, useState} from "react"
+import {Link, useLocation, useNavigate} from "react-router-dom"
 
-import { ScrollToHeaderButton } from "./ScrollToHeaderButton.tsx"
-import { useAppContext } from "../../../AppContext.tsx"
-import { scrollIntoView, useViewportSize } from "../../../Util/BrowserUtils.ts"
+import {ScrollToHeaderButton} from "./ScrollToHeaderButton.tsx"
+import {useAppContext} from "../../../AppContext.tsx"
+import {scrollToElement, useViewportSize} from "../../../Util/BrowserUtils.ts"
 
-import { faBars } from "@fortawesome/free-solid-svg-icons"
+import {faBars} from "@fortawesome/free-solid-svg-icons"
 
-import { Menu } from "../Menu.tsx"
+import {Menu} from "../Menu.tsx"
 
 import s from "/src/UI/_CommonStyles/_exports.module.scss"
 import "./AppHeader.scss"
@@ -19,7 +19,7 @@ let lastScrollY = window.scrollY
 
 export function AppHeader() {
   const appContext = useAppContext()
-  const { headerTitle } = appContext
+  const {headerTitle} = appContext
 
   const navigate = useNavigate()
   const location = useLocation()
@@ -70,27 +70,41 @@ export function AppHeader() {
       lastScrollY = currentScrollY
     }
 
-    window.addEventListener("scroll", handleScroll, { passive: true })
+    window.addEventListener("scroll", handleScroll, {passive: true})
 
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  const handleScrollToHeaderBeforeScrolling = () => {
+    if (!isLandingPage) {
+      navigate("/")
+    }
+  }
+
   const handleMenuItemClick = (cssSelector: string) => {
     setIsMenuOpen(false)
-    const scrollToElement = document.querySelector(cssSelector)
-    scrollIntoView(scrollToElement)
+
+    if (isLandingPage) {
+      scrollToElement(cssSelector)
+    } else {
+      navigate("/")
+
+      setTimeout(() => {
+        scrollToElement(cssSelector)
+      }, 100)
+    }
   }
 
   return (
     <div className="app-header-wrapper">
       <header
         ref={headerRef}
-        className={classNames({ mobile: isMobile, "menu-open": isMenuOpen})}
-        style={{ top: 0}}
+        className={classNames({mobile: isMobile, "menu-open": isMenuOpen})}
+        style={{top: 0}}
       >
         <Link to="/">
           <img src="https://metis-grc.b-cdn.net/images/vite.svg" alt="logo"/>
-          <span>Code:metis</span>
+          <span>GRACE</span>
         </Link>
 
         {headerTitle && <h2>{headerTitle}</h2>}
@@ -101,49 +115,34 @@ export function AppHeader() {
           </button>
         ) : (
           <nav>
-            {isLandingPage && (
-              <>
-                <ScrollToHeaderButton label="Why?" scrollToCssSelector="#why"/>
-                <ScrollToHeaderButton label="Modules" scrollToCssSelector="#product-modules"/>
-                <ScrollToHeaderButton label="Overview" scrollToCssSelector="#product-overview"/>
-                <ScrollToHeaderButton label="Pricing" scrollToCssSelector="#pricing"/>
-              </>
-            )}
+            <ScrollToHeaderButton label="Risks" scrollToCssSelector="#risks" beforeScrolling={handleScrollToHeaderBeforeScrolling}/>
+            <ScrollToHeaderButton label="Policies" scrollToCssSelector="#policies" beforeScrolling={handleScrollToHeaderBeforeScrolling}/>
+            <ScrollToHeaderButton label="Vendors" scrollToCssSelector="#vendors" beforeScrolling={handleScrollToHeaderBeforeScrolling}/>
+            <ScrollToHeaderButton label="Pricing" scrollToCssSelector="#pricing" beforeScrolling={handleScrollToHeaderBeforeScrolling}/>
             <button className="underlined appears" onClick={() => navigate("/contact")}>Contact</button>
-            <button className="underlined appears" onClick={() => navigate("/survey")}>Survey</button>
           </nav>
         )}
       </header>
 
       {isMenuOpen && ( /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-to-interactive-role */
         <Menu close={() => setIsMenuOpen(false)}>
-          {isLandingPage && (
-            <>
-              <li role="button" onClick={() => handleMenuItemClick("#why")}>
-                <span>Why</span>
-              </li>
-              <li role="button" onClick={() => handleMenuItemClick("#product-modules")}>
-                <span>Modules</span>
-              </li>
-              <li role="button" onClick={() => handleMenuItemClick("#product-overview")}>
-                <span>Overview</span>
-              </li>
-              <li role="button" onClick={() => handleMenuItemClick("#pricing")}>
-                <span>Pricing</span>
-              </li>
-            </>
-          )}
+          <li role="button" onClick={() => handleMenuItemClick("#risks")}>
+            <span>Risks</span>
+          </li>
+          <li role="button" onClick={() => handleMenuItemClick("#policies")}>
+            <span>Policies</span>
+          </li>
+          <li role="button" onClick={() => handleMenuItemClick("#vendors")}>
+            <span>Vendors</span>
+          </li>
+          <li role="button" onClick={() => handleMenuItemClick("#pricing")}>
+            <span>Pricing</span>
+          </li>
           <li role="link" onClick={() => {
             navigate("/contact")
             setIsMenuOpen(false)
           }}>
             <span>Contact</span>
-          </li>
-          <li role="link" onClick={() => {
-            navigate("/survey")
-            setIsMenuOpen(false)
-          }}>
-            <span>Survey</span>
           </li>
         </Menu>
         /* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-to-interactive-role */

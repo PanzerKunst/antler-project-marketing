@@ -70,7 +70,7 @@
     }
 
     &#hero,
-    &#product-overview {
+    &#company-overview {
       padding-bottom: 0;
     }
 
@@ -99,50 +99,10 @@
       }
     }
 
-    &#why > .container {
-      container-type: inline-size;
-
-      @include vw(sm) {
-        padding-inline: 0;
-      }
-
-      > ul.styleless {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1.5em;
-
-        > li {
-          max-width: 300px;
-
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 15px;
-
-          > * {
-            text-align: center;
-          }
-
-          > h3 {
-            font-size: $font-size-sm;
-          }
-
-          > p {
-            font-size: $font-size-xxs;
-          }
-        }
-      }
-    }
-
-    &#product-modules > ul > li {
+    &.product-module {
       display: flex;
       flex-direction: column;
       gap: 1.5em;
-
-      &:not(:last-child) {
-        margin-bottom: 5em;
-      }
 
       > div:first-child {
         display: flex;
@@ -186,17 +146,9 @@
           transform: translate(-50%, -50%);
 
           > svg {
-            @include img-size(30%);
+            @include img-size(70%);
             @include svg-shadow;
           }
-        }
-      }
-
-      > div.video-player {
-        margin-block: 5.5%;
-
-        @include vw(lg) {
-          margin-block: 10.8%;
         }
       }
 
@@ -206,8 +158,9 @@
         grid-template-columns: 1fr 1fr;
         align-items: center;
 
-        &:nth-child(2) {
-          > img {
+        &#policies {
+          > .video-preview,
+          > .video-player {
             order: -1;
           }
         }
@@ -216,30 +169,24 @@
           padding-inline: $side-padding-text-block;
         }
       }
-    }
 
-    &#product-overview > div {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5em;
+      &#risks {
+        > div.video-player {
+          margin-block: 5.5%;
 
-      @include vw(lg) {
-        gap: 5em;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+          @include vw(lg) {
+            margin-block: 10.8%;
+          }
+        }
       }
 
-      > ul > li {
-        display: flex;
-        gap: 1em;
+      &#policies {
+        > div.video-player {
+          margin-block: 3.7%;
 
-        > .icon-with-square-border {
-          flex-shrink: 0;
-        }
-
-        h3 {
-          font-size: #{$font-size-text-xl}px;
-          margin-block: 0.7em 0.5em;
+          @include vw(lg) {
+            margin-block: 12.5%;
+          }
         }
       }
     }
@@ -262,7 +209,6 @@
         justify-content: space-between;
       }
     }
-
 
     .pricing-data {
       display: flex;
@@ -328,6 +274,68 @@
       // To avoid the bg color to overflow over the parent's border-radius
       border-bottom-left-radius: $pricing-card-border-radius;
       border-bottom-right-radius: $pricing-card-border-radius;
+    }
+
+    &#get-synergy > .container {
+      container-type: inline-size;
+
+      @include vw(sm) {
+        padding-inline: 0;
+      }
+
+      > ul.styleless {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5em;
+
+        > li {
+          max-width: 300px;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 15px;
+
+          > * {
+            text-align: center;
+          }
+
+          > h3 {
+            font-size: $font-size-sm;
+          }
+
+          > p {
+            font-size: $font-size-xxs;
+          }
+        }
+      }
+    }
+
+    &#company-overview > div {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5em;
+
+      @include vw(lg) {
+        gap: 5em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      > ul > li {
+        display: flex;
+        gap: 1em;
+
+        > .icon-with-square-border {
+          flex-shrink: 0;
+        }
+
+        h3 {
+          font-size: #{$font-size-text-xl}px;
+          margin-block: 0.7em 0.5em;
+        }
+      }
     }
   }
 }
