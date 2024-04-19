@@ -435,7 +435,7 @@ export function LandingPage() {
           <header>
             <span>One more thing...</span>
             <h2>Company Overview</h2>
-            <p>All CRACE modules share a single source of truth for your company data.</p>
+            <p>All GRACE modules share a single source of truth for your company data.</p>
           </header>
 
           <div className="text-block-and-img">
