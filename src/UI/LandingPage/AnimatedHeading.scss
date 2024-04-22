@@ -1,0 +1,41 @@
+h1.animated-heading {
+  text-align: left;
+  width: 6.9em;
+  margin-inline: auto;
+
+  position: relative;
+
+  &.animation-complete {
+    overflow-x: hidden;
+  }
+
+  > .words {
+    display: flex;
+    flex-direction: column;
+
+    > span {
+      $width-letter-g: 0.725em;
+      $width-letter-r: 0.615em;
+
+      &:nth-child(2) {
+        padding-left: $width-letter-g;
+      }
+
+      &:nth-child(3) {
+        padding-left: $width-letter-g + $width-letter-r;
+      }
+    }
+  }
+
+  > .added-letters {
+    position: absolute;
+    top: 0;
+    left: 1.35em;
+
+    > span {
+      &:last-child {
+        margin-left: 0.68em;
+      }
+    }
+  }
+}

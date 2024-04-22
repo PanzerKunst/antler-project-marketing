@@ -17,12 +17,13 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {useState} from "react"
 import {Link} from "react-router-dom"
 
-import {Banner} from "./_CommonComponents/Banner.tsx"
-import {FadeIn} from "./_CommonComponents/FadeIn.tsx"
-import {IconWithDualBgColor} from "./_CommonComponents/IconWithDualBgColor.tsx"
-import {SubscribeToMailingListForm} from "./_CommonComponents/SubscribeToMailingListForm.tsx"
-import {VideoPlayer} from "./_CommonComponents/VideoPlayer.tsx"
-import {AnalyticsEvent, triggerAnalyticsEvent} from "../Util/AnalyticsUtils.ts"
+import {AnimatedHeading} from "./AnimatedHeading.tsx"
+import {AnalyticsEvent, triggerAnalyticsEvent} from "../../Util/AnalyticsUtils.ts"
+import {Banner} from "../_CommonComponents/Banner.tsx"
+import {FadeIn} from "../_CommonComponents/FadeIn.tsx"
+import {IconWithDualBgColor} from "../_CommonComponents/IconWithDualBgColor.tsx"
+import {SubscribeToMailingListForm} from "../_CommonComponents/SubscribeToMailingListForm.tsx"
+import {VideoPlayer} from "../_CommonComponents/VideoPlayer.tsx"
 
 import s from "/src/UI/_CommonStyles/_exports.module.scss"
 import "./LandingPage.scss"
@@ -53,9 +54,7 @@ export function LandingPage() {
       <main>
         <section id="hero" className="text-block-and-img">
           <div>
-            <FadeIn duration={s.animationDurationMd}>
-              <h1>20-20 Oversight</h1>
-            </FadeIn>
+            <AnimatedHeading/>
 
             <FadeIn delay={0.4} duration={s.animationDurationMd}>
               <p>Are you operating in a regulated or controlled environment?</p>
