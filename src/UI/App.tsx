@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 
-import { LandingPage } from "./LandingPage/LandingPage.tsx"
+import { LandingPage } from "./LandingPage.tsx"
 import { ConsultingPage } from "./SimplePages/ConsultingPage.tsx"
 import { ContactPage } from "./SimplePages/ContactPage.tsx"
 import { SurveyPage } from "./SimplePages/SurveyPage.tsx"

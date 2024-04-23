@@ -1,3 +1,4 @@
+import {faBars} from "@fortawesome/free-solid-svg-icons"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import classNames from "classnames"
 import {useEffect, useRef, useState} from "react"
@@ -6,10 +7,8 @@ import {Link, useLocation, useNavigate} from "react-router-dom"
 import {ScrollToHeaderButton} from "./ScrollToHeaderButton.tsx"
 import {useAppContext} from "../../../AppContext.tsx"
 import {scrollToElement, useViewportSize} from "../../../Util/BrowserUtils.ts"
-
-import {faBars} from "@fortawesome/free-solid-svg-icons"
-
 import {Menu} from "../Menu.tsx"
+import {AnimatedBrandName} from "./AnimatedBrandName.tsx"
 
 import s from "/src/UI/_CommonStyles/_exports.module.scss"
 import "./AppHeader.scss"
@@ -104,7 +103,7 @@ export function AppHeader() {
       >
         <Link to="/">
           <img src="https://grace-grc.b-cdn.net/images/vite.svg" alt="logo"/>
-          <span>GRACE</span>
+          <AnimatedBrandName/>
         </Link>
 
         {headerTitle && <h2>{headerTitle}</h2>}
