@@ -17,7 +17,6 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {useState} from "react"
 import {Link} from "react-router-dom"
 
-import {AnimatedHeading} from "./AnimatedHeading.tsx"
 import {AnalyticsEvent, triggerAnalyticsEvent} from "../../Util/AnalyticsUtils.ts"
 import {Banner} from "../_CommonComponents/Banner.tsx"
 import {FadeIn} from "../_CommonComponents/FadeIn.tsx"
@@ -54,16 +53,10 @@ export function LandingPage() {
       <main>
         <section id="hero" className="text-block-and-img">
           <div>
-            <AnimatedHeading/>
+            <h1>Solve your Risk, Vendor and Policy issues</h1>
 
             <FadeIn delay={0.4} duration={s.animationDurationMd}>
-              <p>Are you operating in a regulated or controlled environment?</p>
-              <p>We have grown up supporting companies just like yours. We're taking all this experience and designing bite sized products for
-                you.</p>
-              <p>Tested and future-proof for all listed and regulated companies.</p>
-            </FadeIn>
-
-            <FadeIn delay={0.7} duration={s.animationDurationMd}>
+              <p>Bite-sized solutions for every GRC issue working together and allowing you to grow and adapt.</p>
               <SubscribeToMailingListForm/>
             </FadeIn>
           </div>

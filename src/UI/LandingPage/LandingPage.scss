@@ -32,6 +32,13 @@
         align-self: flex-end;
       }
     }
+
+    @include vw(xl) {
+      gap: 10em;
+    }
+    @include vw(xxl) {
+      gap: 12em;
+    }
   }
 
   > section {
@@ -83,8 +90,12 @@
           flex-direction: column;
 
           text-align: center;
+          @include vw(lg) {
+            text-align: left;
+          }
 
           h1 {
+            font-size: $font-size-xl;
             margin-bottom: 0.5em;
           }
 
@@ -93,7 +104,7 @@
           }
 
           .subscribe-to-mailing-list {
-            margin-block: 1.5em;
+            margin-block: 3em 1.5em;
           }
         }
       }
@@ -312,29 +323,17 @@
       }
     }
 
-    &#company-overview > div {
+    &#company-overview li {
       display: flex;
-      flex-direction: column;
-      gap: 1.5em;
+      gap: 1em;
 
-      @include vw(lg) {
-        gap: 5em;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+      > .icon-with-square-border {
+        flex-shrink: 0;
       }
 
-      > ul > li {
-        display: flex;
-        gap: 1em;
-
-        > .icon-with-square-border {
-          flex-shrink: 0;
-        }
-
-        h3 {
-          font-size: #{$font-size-text-xl}px;
-          margin-block: 0.7em 0.5em;
-        }
+      h3 {
+        font-size: #{$font-size-text-xl}px;
+        margin-block: 0.7em 0.5em;
       }
     }
   }

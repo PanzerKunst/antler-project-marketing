@@ -3,9 +3,13 @@
 .subscribe-to-mailing-list {
   > .subscribed {
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 0.5em;
+
+    justify-content: center;
+    @include vw(lg) {
+      justify-content: flex-start;
+    }
 
     > span {
       &:first-child {
@@ -23,7 +27,11 @@
 
   > .MuiFormControl-root {
     width: 300px;
+
     margin-inline: auto;
+    @include vw(lg) {
+      margin-inline: 0;
+    }
 
     > div {
       display: flex;
