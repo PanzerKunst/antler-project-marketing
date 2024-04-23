@@ -53,7 +53,9 @@ export function LandingPage() {
       <main>
         <section id="hero" className="text-block-and-img">
           <div>
-            <h1>Solve your Risk, Vendor and Policy issues</h1>
+            <FadeIn duration={s.animationDurationMd}>
+              <h1>Solve your Risk, Vendor and Policy issues</h1>
+            </FadeIn>
 
             <FadeIn delay={0.4} duration={s.animationDurationMd}>
               <p>Bite-sized solutions for every GRC issue working together and allowing you to grow and adapt.</p>
@@ -168,7 +170,7 @@ export function LandingPage() {
             <ul className="styleless">
               <li>
                 <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faClockRotateLeft} />
+                  <FontAwesomeIcon icon={faClockRotateLeft}/>
                 </IconWithDualBgColor>
                 <h3>Full auditable history</h3>
                 <p>Track changes and approvals. Store previous versions of all key documents. Maintain clear lines of responsibility in times of
@@ -176,7 +178,7 @@ export function LandingPage() {
               </li>
               <li>
                 <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faFileWord} />
+                  <FontAwesomeIcon icon={faFileWord}/>
                 </IconWithDualBgColor>
                 <h3>Leverage existing documents</h3>
                 <p>Integration with OneDrive, Sharepoint, Teams and Google Drive. Protect key documents by storing in your existing folder
@@ -184,21 +186,21 @@ export function LandingPage() {
               </li>
               <li>
                 <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faBell} />
+                  <FontAwesomeIcon icon={faBell}/>
                 </IconWithDualBgColor>
                 <h3>Reminders</h3>
                 <p>Preset scheduled reminders, or simply nudge responsible people for updates when you need an update.</p>
               </li>
               <li>
                 <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faCircleNodes} />
+                  <FontAwesomeIcon icon={faCircleNodes}/>
                 </IconWithDualBgColor>
                 <h3>Cross-reference objects</h3>
                 <p>Increase insight through connections between policies, risks, vendors, controls and processes.</p>
               </li>
               <li>
                 <IconWithDualBgColor>
-                  <FontAwesomeIcon icon={faStamp} />
+                  <FontAwesomeIcon icon={faStamp}/>
                 </IconWithDualBgColor>
                 <h3>Certification-ready</h3>
                 <p>Basel framework, DORA and ISO compliance ensured, with excellent flexibility, future proofing the solutions.</p>
