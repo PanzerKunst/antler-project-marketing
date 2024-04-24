@@ -9,9 +9,9 @@ export function ContactPage() {
           <p>We're just getting started, and would love to hear from you. How can we build the best possible product for you?</p>
           <p>Don't hesitate to email us at <span className="underlined disappears">grace@chelsea.se</span>.</p>
         </div>
-        <img src="https://grace-grc.b-cdn.net/images/contact/oscar-nord-7WlEdxOy-QA-unsplash.jpg" alt="Stockholm" className="desktop"/>
+        <img src="/images/contact/oscar-nord-7WlEdxOy-QA-unsplash.jpg" alt="Stockholm" className="desktop"/>
       </main>
-      <img src="https://grace-grc.b-cdn.net/images/contact/raphael-andres-3cwvFD-YPtk-unsplash.jpg" alt="Stockholm" className="mobile"/>
+      <img src="/images/contact/raphael-andres-3cwvFD-YPtk-unsplash.jpg" alt="Stockholm" className="mobile"/>
     </div>
   )
 }

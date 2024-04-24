@@ -62,8 +62,8 @@ export function LandingPage() {
               <SubscribeToMailingListForm/>
             </FadeIn>
           </div>
-          <img src="https://grace-grc.b-cdn.net/images/landing/hero-mobile.png" alt="GRC app" className="mobile"/>
-          <img src="https://grace-grc.b-cdn.net/images/landing/hero-desktop.png" alt="GRC app" className="desktop"/>
+          <img src="/images/landing/hero-mobile.png" alt="GRC app" className="mobile"/>
+          <img src="/images/landing/hero-desktop.png" alt="GRC app" className="desktop"/>
         </section>
 
         <section id="risks" className="product-module">
@@ -91,8 +91,8 @@ export function LandingPage() {
           {!playRiskModuleVideo ? (
             // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/interactive-supports-focus
             <div className="video-preview" role="button" onClick={handlePlayRiskModuleVideo}>
-              <img src="https://grace-grc.b-cdn.net/images/landing/risk-mobile.png" alt="GRC Risk module" className="mobile"/>
-              <img src="https://grace-grc.b-cdn.net/images/landing/risk-desktop.png" alt="GRC Risk module" className="desktop"/>
+              <img src="/images/landing/risk-mobile.png" alt="GRC Risk module" className="mobile"/>
+              <img src="/images/landing/risk-desktop.png" alt="GRC Risk module" className="desktop"/>
               <button className="button icon-only light"><FontAwesomeIcon icon={faCirclePlay}/></button>
             </div>
           ) : (
@@ -125,8 +125,8 @@ export function LandingPage() {
           {!playPolicyModuleVideo ? (
             // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/interactive-supports-focus
             <div className="video-preview" role="button" onClick={handlePlayPolicyModuleVideo}>
-              <img src="https://grace-grc.b-cdn.net/images/landing/policy-mobile.png" alt="GRC Policy module" className="mobile"/>
-              <img src="https://grace-grc.b-cdn.net/images/landing/policy-desktop.png" alt="GRC Policy module" className="desktop"/>
+              <img src="/images/landing/policy-mobile.png" alt="GRC Policy module" className="mobile"/>
+              <img src="/images/landing/policy-desktop.png" alt="GRC Policy module" className="desktop"/>
               <button className="button icon-only light"><FontAwesomeIcon icon={faCirclePlay}/></button>
             </div>
           ) : (
@@ -156,8 +156,8 @@ export function LandingPage() {
               </li>
             </ul>
           </div>
-          <img src="https://grace-grc.b-cdn.net/images/landing/vendor-mobile.png" alt="GRC Vendor module" className="mobile"/>
-          <img src="https://grace-grc.b-cdn.net/images/landing/vendor-desktop.png" alt="GRC Vendor module" className="desktop"/>
+          <img src="/images/landing/vendor-mobile.png" alt="GRC Vendor module" className="mobile"/>
+          <img src="/images/landing/vendor-desktop.png" alt="GRC Vendor module" className="desktop"/>
         </section>
 
         <section id="get-synergy">
@@ -463,8 +463,8 @@ export function LandingPage() {
                 </div>
               </li>
             </ul>
-            <img src="https://grace-grc.b-cdn.net/images/landing/home-mobile.png" alt="App preview" className="mobile"/>
-            <img src="https://grace-grc.b-cdn.net/images/landing/home-desktop.png" alt="App preview" className="desktop"/>
+            <img src="/images/landing/home-mobile.png" alt="App preview" className="mobile"/>
+            <img src="/images/landing/home-desktop.png" alt="App preview" className="desktop"/>
           </div>
         </section>
       </main>
