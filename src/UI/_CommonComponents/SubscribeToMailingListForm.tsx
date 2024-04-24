@@ -70,7 +70,7 @@ export function SubscribeToMailingListForm() {
           <span>🎉</span>
         </div>
       ) : (
-        <FormControl error={emailField.error !== ""} id="email">
+        <FormControl error={emailField.error !== ""}>
           <FormLabel>Get notified when we launch</FormLabel>
           <div>
             <Input
