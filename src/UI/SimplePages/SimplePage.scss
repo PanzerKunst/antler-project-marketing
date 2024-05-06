@@ -36,6 +36,10 @@
       grid-template-columns: 1fr 1fr;
       align-items: center;
       gap: 5em;
+
+      > div {
+        padding-bottom: 1em;
+      }
     }
   }
 
