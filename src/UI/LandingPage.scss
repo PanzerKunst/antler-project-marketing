@@ -298,7 +298,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 1.5em;
+        gap: 3.5em 1.5em;
 
         > li {
           max-width: 300px;
@@ -326,6 +326,10 @@
     &#company-overview li {
       display: flex;
       gap: 1em;
+
+      &:not(:last-child) {
+        margin-bottom: 2em;
+      }
 
       > .icon-with-square-border {
         flex-shrink: 0;

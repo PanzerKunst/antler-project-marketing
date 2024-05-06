@@ -71,7 +71,7 @@ export function LandingPage() {
             <IconWithDualBgColor>
               <FontAwesomeIcon icon={faTriangleExclamation}/>
             </IconWithDualBgColor>
-            <h3>Risk Manager</h3>
+            <h2 className="h3">Risk Manager</h2>
             <p>Financial, Operational and Strategic risks - all catered for under one platform.</p>
             <ul className="styleless">
               <li>
@@ -105,7 +105,7 @@ export function LandingPage() {
             <IconWithDualBgColor>
               <FontAwesomeIcon icon={faSquareCheck}/>
             </IconWithDualBgColor>
-            <h3>Policy Manager</h3>
+            <h2 className="h3">Policy Manager</h2>
             <p>Take the pain out of Policies, Instructions, Guidelines, and Handbooks.</p>
             <ul className="styleless">
               <li>
@@ -139,7 +139,7 @@ export function LandingPage() {
             <IconWithDualBgColor>
               <FontAwesomeIcon icon={faFileSignature}/>
             </IconWithDualBgColor>
-            <h3>Vendor Manager</h3>
+            <h2 className="h3">Vendor Manager</h2>
             <p>Keep your contracts, vendors, audits in one place.</p>
             <ul className="styleless">
               <li>

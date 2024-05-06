@@ -15,36 +15,6 @@
   }
 }
 
-.page {
-  > main {
-    margin-block: $main-block-margin;
-  }
-
-  &.simple {
-    > main.container:not(.two-col) {
-      @include vw(xl) {
-        width: $vw-lg;
-      }
-    }
-
-    h1 {
-      margin-bottom: 1em;
-    }
-
-    h2 {
-      margin-block: 2em 1em;
-    }
-
-    ul {
-      margin-bottom: 1.5em;
-
-      > li:not(:first-of-type) {
-        margin-top: 0.2em;
-      }
-    }
-
-    p + ul {
-      margin-top: -1.3em; // Compensates for the bottom-margin of the preceding `p`
-    }
-  }
+.page > main {
+  margin-block: $main-block-margin;
 }

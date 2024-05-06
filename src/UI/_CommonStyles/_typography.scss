@@ -28,15 +28,18 @@ h3 {
   letter-spacing: -0.03em;
 }
 
-h1 {
+h1,
+.h1 {
   font-size: $font-size-xxl;
 }
 
-h2 {
+h2,
+.h2 {
   font-size: $font-size-lg;
 }
 
-h3 {
+h3,
+.h3 {
   font-size: $font-size-md;
 }
 
@@ -55,7 +58,10 @@ p,
 blockquote {
   font-size: $font-size-sm;
   line-height: 1.4em;
-  margin-bottom: 1.5em;
+
+  &:not(:last-child) {
+    margin-bottom: 1.5em;
+  }
 }
 
 span.underlined {
