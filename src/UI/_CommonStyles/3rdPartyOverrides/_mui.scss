@@ -1,6 +1,7 @@
 @import "../mixins";
 
 :root {
+  --joy-fontFamily-body: Inter; // stylelint-disable-line
   --joy-palette-danger-500: #{$color-text-danger};
   --joy-palette-primary-500: #{$color-brand-600};
   --joy-palette-success-solidBg: #{$color-green-500}; // stylelint-disable-line
