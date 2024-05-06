@@ -28,7 +28,7 @@ export function ConsultingPage() {
         <div className="container two-col">
           <div>
             <h2>Christophe Bram</h2>
-            <p>Christophe is a hands-on tech lead. His has built robust web and API solutions for multiple industries over the years. He focuses on
+            <p>Christophe is a hands-on tech lead. He has built robust web and API solutions for multiple industries over the years. He focuses on
               providing value as quickly as possible, yet without ever cutting corners.</p>
           </div>
           <img src="/images/consulting/christophe-desktop.jpg" alt="Christophe Bram" className="desktop"/>
