@@ -211,13 +211,14 @@
       gap: 1.5em;
 
       > li {
-        border: 1px solid $color-border;
-        border-radius: $pricing-card-border-radius;
-        @include drop-shadow(sm);
-
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        border: 1px solid $color-border;
+        border-radius: $pricing-card-border-radius;
+        @include drop-shadow(sm);
+        background-color: $color-app-bg;
       }
     }
 
