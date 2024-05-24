@@ -18,7 +18,6 @@ import {useState} from "react"
 import {Link} from "react-router-dom"
 
 import {AnalyticsEvent, triggerAnalyticsEvent} from "../Util/AnalyticsUtils.ts"
-import {Banner} from "./_CommonComponents/Banner.tsx"
 import {FadeIn} from "./_CommonComponents/FadeIn.tsx"
 import {IconWithDualBgColor} from "./_CommonComponents/IconWithDualBgColor.tsx"
 import {SubscribeToMailingListForm} from "./_CommonComponents/SubscribeToMailingListForm.tsx"
@@ -41,15 +40,6 @@ export function LandingPage() {
 
   return (
     <div className="page landing">
-      <Banner>
-        <span>Make an impact by filling in <Link
-          to="/survey"
-          className="underlined disappears negative"
-          onClick={() => triggerAnalyticsEvent(AnalyticsEvent.CLICK_PRICE_CTA_TIER_3)}
-        >
-          our survey
-        </Link></span>
-      </Banner>
       <main>
         <section id="hero" className="text-block-and-img">
           <div>

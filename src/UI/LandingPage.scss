@@ -1,9 +1,5 @@
 @import "/src/UI/_CommonStyles/mixins";
 
-.page.landing > .banner + main {
-  margin-top: 11em;
-}
-
 .page.landing > main {
   @include responsive-images(lg);
   margin-bottom: 0;
